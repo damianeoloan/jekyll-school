@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}">
+  <meta name="robots" content="index, follow">
+
+  <title>{% if page.title %}{{ page.title | replace: '-', ' ' | append: ' | ' }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Analytics, remove this and add your own here -->
+  {% if site.url == '' %}
+
+  {% endif %}
+
+  <!-- Schema.org -->
+  <meta itemprop="name" content="{{ page.title | replace: '-', ' ' | append: ' | beiaierlan.com' }}">
+  <meta itemprop="description" content="{{ page.description }}">
+  <!-- Twitter -->  
+  <meta itemprop="image" content="http://www.example.com/image.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@北爱尔兰">
+  <meta name="twitter:title" content="{{ page.title | replace: '-', ' ' | append: ' | beiaierlan.com' }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:creator" content="@北爱尔兰">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="http://www.example.com/image.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ site.title }} | {{ page.title | replace: '-', ' '  }}">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
+  <meta property="og:image" content="http://example.com/image.jpg" />
+  <meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:site_name" content="北爱尔兰 | beiaierlan.com" />
+  <meta property="article:tag" content="{{ page.title }}" />
+  <meta property="fb:admins" content="Facebook numberic ID" />
+
+  <link rel="copyright" href="creativecommons.org/licenses/by-nc/3.0/">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/vendors/normalize.css">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+</head>

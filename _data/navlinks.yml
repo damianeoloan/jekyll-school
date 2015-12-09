@@ -1,0 +1,12 @@
+---
+- name: Home
+  url: /
+
+- name: Students
+  url: /students/
+
+- name: Staff
+  url: /admins/
+
+- name: Latest
+  url: /posts/index.html

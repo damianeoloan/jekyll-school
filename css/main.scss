@@ -1,0 +1,63 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 2.1em;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 3em;
+
+$spacing-unit: 40px;
+
+$black-color: #2f2f2f;
+$white-color: #f2f2f2;
+$red-color: #4f0707;
+$navy-color: #020017;
+$yellow-color: #f0e53e;
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+// Width of the content area
+$content-width: 1200px;
+$mobile: 550px;
+$tablet: 800px;
+$desktop: 1200px;
+
+
+// Media queries
+// @include media-query($tablet) {
+  // .wrapper {
+  // padding-right: 2*$spacing-unit;
+  // padding-left: 2*$spacing-unit;
+  // }
+// }
+
+// @include media-query($desktop) {
+//   .wrapper {
+//   padding-right: 3*$spacing-unit;
+//   padding-left: 3*$spacing-unit;
+//   }
+// }
+
+// @include media-query($retina) {
+//   .wrapper {
+//   padding-right: 4*$spacing-unit;
+//   padding-left: 4*$spacing-unit;
+//   }
+// }
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;

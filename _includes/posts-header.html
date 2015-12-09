@@ -1,0 +1,1 @@
+<h2>{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</h2>

@@ -1,0 +1,21 @@
+---
+layout: default
+permalink: /admins/
+---
+<h2  class="collection-heading">Hello! This is our <a href="{{ site.url }}">Jekyll School</a> admins group. </h2>
+
+<p class="collection-introduction">This is your group page where people can find you and you can say hello.</br>To appear here, just add a file to the _admins folder following the template in Victor.md.</br>Later, you can edit this paragraph inside /_admins/index.html to add a group introduction.</p>
+
+<div class="grid-container">
+  {% for admin in site.admins %}
+  <div class="one-third column">
+	<a href="{{ admin.url }}"><div class="person-profile" itemscope itemtype="https://schema.org/Person">
+	  <img src="{{ admin.img-path }}" alt="{{ admin.name }}" itemprop="image">
+
+	  <h3 itemprop="name">{{ admin.name }}</h3>
+
+	  <p itemprop="description">{{ admin.introduction | truncate: 60 }}</p>
+	</div></a>
+  </div>
+  {% endfor %}
+</div>

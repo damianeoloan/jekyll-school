@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<div class="grid-container person-page"  itemscope itemtype="https://schema.org/Person">
+  <div class="two-fifths column">
+	<div class="person-profile profile-page">
+	  <img src="{{ page.img-path }}" alt="{{ page.name }}" itemprop="image">
+
+	  <h3 itemprop="name">{{ page.name }}</h3>
+
+	  <p itemprop="description">{{ page.introduction | truncate: 60 }}</p>
+	</div>
+  </div>
+  {% if page.favourites %}
+  <div class="one-fifth column favourite-things">
+	<h2>Things&nbsp;I&nbsp;&#9829;</h2>
+	{% for favourite in page.favourites %}
+	<p>{{ favourite[0] | capitalize }}</p>
+	<p>{{ favourite[1] | capitalize }}</p>
+	{% endfor %}
+  </div>
+
+  <div class="two-fifths column" itemprop="description">
+  	<article class="description">
+	  <h2>In a Few Words...</h2>
+	  {{ content | truncate: 450 }}
+	</article>
+  </div>
+  {% else %}
+  <div class="three-fifths column" itemprop="description">
+	<article class="description">
+	  <h2>In a Few Words...</h2>
+	  {{ content | truncate: 450 }}
+	</article>
+  </div>
+  {% endif %}
+</div>
+
+<div class="posts-list">
+	<h2>Latest Posts</h2>
+	{% for post in site.posts %}
+	  {% if post.author == page.username %}
+	    {% if post.layout == 'image-post' %}
+		<a href="{{ post.url }}"><div class="post-thumbnail image-post">
+		  <figure>
+		  	<figcaption>{{ post.img-caption }}</figcaption>
+		  	
+		    <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+		  </figure>
+		</div></a>
+		{% elsif post.layout == 'short-form' %}
+		<a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+		  <blockquote>
+		  <p>{{ post.content }}</p>
+		  {% if post.quote-ref %}
+		    <footer>{{ post.quote-ref }}</footer>
+		  {% endif %}
+		</blockquote>
+		</div></a>
+		{% else %}
+		<a href="{{ post.url }}"><div class="post-thumbnail long-form">
+		  <article>
+		    <h1>{{ post.title }}</h1>
+		    <p>{{ post.excerpt }}</p>
+		    <a class="read-more" href="{{ post.url }}">read more</a>
+		  </article>
+		</div></a>
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+</div>

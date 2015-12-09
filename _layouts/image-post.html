@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<figure class="post-figure">
+  <figcaption>{{ page.img-caption }}</figcaption>
+  
+  <img src="{{ page.img-path }}" alt="{{ page.img-description }}">
+</figure>
+
+<a href="/{{ page.author }}"><h2>Created on {{ page.date | date: "%-d %b, %y" }} by 
+  {% for student in site.students %}
+    {% if student.username == page.author %}
+    <span>{{ student.name }}</span>
+    {% endif %}
+  {% endfor %}
+
+  {% for admin in site.admins %}
+    {% if admin.username == page.author %}
+    <span>{{ admin.name }}</span>
+    {% endif %}
+  {% endfor %}
+</h2></a>

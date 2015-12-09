@@ -1,0 +1,22 @@
+# Site settings
+title: "Jekyll School" # add your group name here
+author: "Damian O'Loan"# you can add your names here as a yaml list
+email: service@jekyllschool.com # add your official contact email address here
+description: "A simple, free and open-source tool for students and teachers to create and publish websites together" # Describe your group here, say hello!
+sub-description: # If you like, add more detail here
+baseurl: # the subpath of your site, e.g. /blog/
+url: "127.0.0.1:4000" # the base hostname & protocol for your site
+# Pagination
+paginate: 5
+paginate_path: posts/page:num
+permalink: /:title
+# Build settings
+markdown: kramdown
+# Collections
+collections:
+  students:
+    output: true
+    permalink: /:path/
+  admins:
+    output: true
+    permalink: /:path/

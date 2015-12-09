@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>two</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="two" sketch:type="MSArtboardGroup">
+            <rect id="Neck" fill="#F5DDB1" sketch:type="MSShapeGroup" x="118" y="202" width="65" height="22"></rect>
+            <circle id="Body" fill="#2D2603" sketch:type="MSShapeGroup" cx="150" cy="394" r="173"></circle>
+            <circle id="Head" fill="#F5DDB1" sketch:type="MSShapeGroup" cx="150" cy="123" r="90"></circle>
+            <rect id="mouth" fill="#F5F5F5" sketch:type="MSShapeGroup" x="141" y="150" width="19" height="29" rx="8"></rect>
+            <g id="left-eye" sketch:type="MSLayerGroup" transform="translate(100.000000, 67.000000)">
+                <ellipse id="eye" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="18" cy="34.5" rx="18" ry="34.5"></ellipse>
+                <ellipse id="iris" fill="#532B08" sketch:type="MSShapeGroup" cx="18" cy="39.5" rx="18" ry="29.5"></ellipse>
+                <ellipse id="lower-light" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="28" cy="58.5" rx="3" ry="6.5"></ellipse>
+                <ellipse id="pupil" fill="#222222" sketch:type="MSShapeGroup" cx="21.5" cy="39.5" rx="9.5" ry="14.5"></ellipse>
+                <ellipse id="upper-light" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="12" cy="19.5" rx="6" ry="12.5"></ellipse>
+            </g>
+            <g id="right-eye" sketch:type="MSLayerGroup" transform="translate(165.000000, 67.000000)">
+                <ellipse id="eye" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="18" cy="34.5" rx="18" ry="34.5"></ellipse>
+                <ellipse id="iris" fill="#532B08" sketch:type="MSShapeGroup" cx="18" cy="39.5" rx="18" ry="29.5"></ellipse>
+                <ellipse id="lower-light" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="28" cy="57.5" rx="3" ry="6.5"></ellipse>
+                <ellipse id="pupil" fill="#222222" sketch:type="MSShapeGroup" cx="15.5" cy="39.5" rx="9.5" ry="14.5"></ellipse>
+                <ellipse id="upper-light" fill="#F5F5F5" sketch:type="MSShapeGroup" cx="13" cy="24.5" rx="6" ry="12.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

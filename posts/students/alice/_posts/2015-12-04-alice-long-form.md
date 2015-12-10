@@ -8,14 +8,14 @@ comments:
 author: alice
 layout: long-form
 title: Post-ironic four dollar toast bespoke twee bushwick
-excerpt: "Before they sold out ethical stumptown, pug irony fap kickstarter. Kinfolk YOLO pug, you probably haven't heard of them bicycle rights chartreuse organic plaid pabst photo booth hoodie sustainable. Hoodie beard truffaut, fashion axe kitsch stumptown occupy meh umami next level actually bespoke whatever"
+excerpt: "Before they sold out ethical stumptown, pug irony svgkickstarter. Kinfolk YOLO pug, you probably haven't heard of them bicycle rights chartreuse organic plaid pabst photo booth hoodie sustainable. Hoodie beard truffaut, fashion axe kitsch stumptown occupy meh umami next level actually bespoke whatever"
 ---
 
 ##blue bottle portland art party tilde cardigan franzen messenger bag
 
 Farm-to-table everyday carry flexitarian, kogi 90's affogato before they sold out ramps iPhone migas tacos fixie.
 
-Before they sold out ethical stumptown, pug irony fap kickstarter. Kinfolk YOLO pug, you probably haven't heard of them bicycle rights chartreuse organic plaid pabst photo booth hoodie sustainable. Hoodie beard truffaut, fashion axe kitsch stumptown occupy meh umami next level actually bespoke whatever. Twee migas kinfolk, lumbersexual kogi quinoa 90's single-origin coffee.
+Before they sold out ethical stumptown, pug irony svgkickstarter. Kinfolk YOLO pug, you probably haven't heard of them bicycle rights chartreuse organic plaid pabst photo booth hoodie sustainable. Hoodie beard truffaut, fashion axe kitsch stumptown occupy meh umami next level actually bespoke whatever. Twee migas kinfolk, kogi quinoa 90's single-origin coffee.
 
 Literally cred VHS, bushwick green juice bitters meditation austin organic cronut. Disrupt street art semiotics ramps squid mustache. Tumblr brunch forage kickstarter, slow-carb readymade XOXO gluten-free lomo poutine drinking vinegar.
 

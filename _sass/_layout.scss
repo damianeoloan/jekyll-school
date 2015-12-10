@@ -48,10 +48,8 @@
     text-decoration: none;
   }
   a:hover, a:target, a:active {
-    color: $navy-color;
-    background-color: $white-color;
     h1, h2 {
-      color: $navy-color;
+      color: $yellow-color;
     }
   }
 }
@@ -129,6 +127,58 @@
 }
 
 /**
+ * Site footer
+ */
+footer.main-footer {
+  margin-top: $spacing-unit;
+  background: $navy-color;
+  color: $white-color;
+  padding: $spacing-unit/2 0 $spacing-unit;
+  text-align: center;
+  a {
+    color: $white-color;
+  }
+  svg {
+    path {
+      fill: $white-color;
+    }
+  }
+  h4 {
+    font-weight: 100;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+  .footer-shares {
+    h3 {
+      margin-bottom: 0;
+      font-weight: 100;
+    }
+
+    a svg:hover {
+      path {
+        fill: $yellow-color;
+      }
+    }
+  }
+  .social-share {
+    svg {
+      width: 48px;
+      height: 48px;
+      margin-top: $spacing-unit/2;
+    }
+  }
+  a.share-item:first-of-type {
+    margin-right: $spacing-unit;
+  }
+  a.share-item:last-of-type {
+    margin-left: $spacing-unit;
+  }
+  a:hover {
+    color: $yellow-color;
+  }
+}
+
+/**
  * Buttons
  */
 
@@ -186,7 +236,7 @@
     }
   }
 }
-section#value-icons {
+section#how-it-works {
   text-align: center;
   vertical-align: middle;
   svg {
@@ -213,8 +263,79 @@ section#value-icons {
     font-size: 3rem;
   }
 }
+
 /**
- * Collections
+ * Setup steps
+ */
+
+ ol.guide {
+  max-width: 100%;
+  padding: $spacing-unit/2 12.5%;
+  padding: $spacing-unit/2;
+  list-style: none;
+  text-align: center;
+  li {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: $spacing-unit/2 0;
+  }
+  li.guide-item:nth-of-type(odd) {
+    background: $navy-color;
+    color: $white-color;
+    svg {
+      circle {
+        fill: $white-color;
+      }
+      path {
+        fill: $red-color;
+      }
+    }
+  }
+  li.guide-item:nth-of-type(even) {
+    background: $grey-color-light;
+    svg {
+      circle {
+        fill: $navy-color;
+      }
+      path {
+        fill: $white-color;
+      }
+    }
+  }
+  img {
+    vertical-align: middle;
+  }
+  p {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+  a {
+    color: $yellow-color;
+  }
+  a.blue-link {
+    color: lighten($navy-color, 15%); 
+  }
+  svg {
+    margin-top: $spacing-unit;
+    width: 6rem;
+    height: 6rem;
+  }
+  div.guide-item-divider {
+    height: $spacing-unit;
+  }
+  div.guide-item-divider:nth-of-type(odd) {
+    border-left: 1px solid $navy-color;
+    margin-left: 30%;
+  }
+  div.guide-item-divider:nth-of-type(even) {
+    border-right: 1px solid $navy-color;
+    margin-right: 30%;
+  }
+}
+
+
+/**
+ * Students/admins indexes
  */
 
 .collection-heading {
@@ -246,6 +367,7 @@ div.person-page {
     max-width: 50%;
     border: 1px solid $navy-color;
     border-radius: 50%;
+    background: $white-color;
   }
   p {
     font-size: 2rem;
@@ -359,21 +481,47 @@ article.long-form-page {
   }
 }
 
+.all-posts {
+  margin-top: $spacing-unit; 
+}
+
 ul.post-list {
   list-style: none;
+  padding: 0;
+  li {
+    margin: 0;
+  }
+  .post-thumbnail {
+    margin-top: 0;
+  }
   p.post-meta {
     text-align: right;
     margin-right: 15%;
     line-height: 3rem;
   }
-  div.pagination {
-    a.previous-page {
-      float: left;
-      border: 2px solid $navy-color;
-    }
-    a.next-page {
-      float: right;
-      border: 2px solid $navy-color;
-    }
+}
+
+div.pagination {
+  display: table;
+  margin: 0 auto $spacing-unit;
+  font-size: 3rem;
+  * {
+    margin: 0 $spacing-unit;
+  }
+  a {
+    font-weight: 400;
+  }
+  a:hover {
+    background: $yellow-color;
+  }
+  .previous-page {
+    border: 2px solid $navy-color;
+    border-radius: 4rem;
+    padding: $spacing-unit/4 $spacing-unit/2;
+  }
+  .next-page {
+    border: 2px solid $navy-color;
+    border-radius: 4rem;
+    padding: $spacing-unit/4 $spacing-unit/2;
   }
 }

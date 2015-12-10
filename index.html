@@ -19,7 +19,9 @@ layout: default
   </div>
 </section>
 
-<section id="value-icons">
+{% if site.title == 'Jekyll School' %}
+<!-- Start Jekyll School contents -->
+<section id="how-it-works">
   <h2>As you make your website, you'll learn:</h2>
   <div class="grid-container">
 	  <div class="one-third column home-icon">
@@ -38,12 +40,31 @@ layout: default
 	  </div>
   </div>
 
-  <p class="standout">These tools, as well as Jekyll, are all free.</br>Let's take the 6 steps to creating your site...</p>
+  <p class="standout">These tools, as well as Jekyll, are all free.</br>Let's get started creating your site...</p>
 </section>
 
-<section class="guide">
-	<div class="guide-one">
+<ol class="guide">
+  {% for step in site.data.steps %}
+  <li class="guide-item">
+    <h2>{{ step.h2 }}</h2>
+    <div class="grid-container">
+      <div class="one-half column">
+  	    <img src="{{ step.img-path }}" alt="{{ step.img-alt }}">
+  	  </div>
 
-	</div>
-</section>
+  	  <div class="one-half column">
+  	    {{ step.svg }}
+  	    <p>{{ step.text }}</p>
+  	  </div>
+    </div>
+  </li>
+  {% unless forloop.last == true %}
+  <div class="guide-item-divider">&nbsp;</div>
+  {% endunless %}
+  {% endfor %}  
+</ol>
+<!-- End Jekyll School contents -->
+{% endif %}
+<!-- Start themed homepage contents -->
+<!-- End themed homepage contents -->
 

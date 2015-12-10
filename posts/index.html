@@ -2,7 +2,7 @@
 layout: default
 title: Posts
 ---
-<h1>Our Posts</h1>
+<h1 class="all-posts">Our Posts</h1>
 <ul class="post-list">
   {% for post in paginator.posts %}
     {% if post.layout == 'short-form' %}
@@ -46,14 +46,14 @@ title: Posts
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous-page">Previous</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous-page">PREV</a>
   {% else %}
-    <span class="previous-page">Previous</span>
+    <span class="previous-page">PREV</span>
   {% endif %}
   <span class="page-number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next-page">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next-page">NEXT</a>
   {% else %}
-    <span class="next-page">Next</span>
+    <span class="next-page">NEXT</span>
   {% endif %}
 </div>

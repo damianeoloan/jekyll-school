@@ -8,32 +8,31 @@
   <meta name="author" content="Alice A, Bob B, Craig C, Dan D, Eve E, Faith F, Mallory M, Oscar O, Peggy P, Sybil S, Trent T">
   <meta name="robots" content="index, follow">
 
-  <title>Jekyll School</title>
-  <meta name="description" content="A simple, free and open-source tool for students and teachers to create and publish websites together">
+  <title>Questions and Ideas | Jekyll School</title>
+  <meta name="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
 
   <!-- Analytics, remove this and add your own here -->
-  
 
   <!-- Schema.org -->
-  <meta itemprop="name" content=" | beiaierlan.com">
-  <meta itemprop="description" content="">
+  <meta itemprop="name" content="Questions and Ideas | Jekyll School">
+  <meta itemprop="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
   <!-- Twitter -->  
-  <meta itemprop="image" content="http://www.example.com/image.jpg">
+  <meta itemprop="image" content="127.0.0.1:4000//logo.svg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@北爱尔兰">
-  <meta name="twitter:title" content=" | beiaierlan.com">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:creator" content="@北爱尔兰">
+  <meta name="twitter:site" content="@jekyll-school">
+  <meta name="twitter:title" content="Questions and Ideas | Jekyll School">
+  <meta name="twitter:description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
+  <meta name="twitter:creator" content="Jekyll School">
   <!-- Twitter Summary card images must be at least 120x120px -->
-  <meta name="twitter:image" content="http://www.example.com/image.jpg">
+  <meta name="twitter:image" content="127.0.0.1:4000//logo.svg">
   <!-- Open Graph -->
-  <meta property="og:title" content="Jekyll School | ">
+  <meta property="og:title" content="Jekyll School | Questions and Ideas">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="/questions-and-ideas/" />
-  <meta property="og:image" content="http://example.com/image.jpg" />
-  <meta property="og:description" content="A simple, free and open-source tool for students and teachers to create and publish websites together" />
-  <meta property="og:site_name" content="北爱尔兰 | beiaierlan.com" />
-  <meta property="article:tag" content="" />
+  <meta property="og:image" content="127.0.0.1:4000//logo.svg" />
+  <meta property="og:description" content="A simple, free way for students and teachers to learn to code, create and publish websites together" />
+  <meta property="og:site_name" content="{[ site.title ]}" />
+  <meta property="article:tag" content="Questions and Ideas" />
   <meta property="fb:admins" content="Facebook numberic ID" />
   <!-- Copyright -->
   <link rel="copyright" href="creativecommons.org/licenses/by-nc/3.0/">
@@ -105,13 +104,37 @@
   </div>
   
   <div class="accordion">
+    <dt>Customising your profile</dt>
+    <dd><p>If you look at <a href="students/">Dan's profile</a>, you'll see he customised it and now you can too.</p>
+<p>That's because Dan created a file for custom CSS. Find it at /_sass/_custom.scss.</p>
+<p>Dan's username is dan so he named his CSS class person-profile-dan.</p>
+<pre>
+.person-profile-dan {
+background: #D0011B;
+border-radius: 4rem; 
+}
+</pre>
+<p>If you already know some CSS, you can do this now too.</p>
+<p>Dan was able to do this because he added some liquid and HTML to the index page at /students/.</p>
+<pre>
+{% if student.custom == true %}
+div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person"
+{% else %}
+div class="person-profile" itemscope itemtype="https://schema.org/Person"
+{% endif %}
+</pre>
+<p>In this way everyone can gradually customise the site more and more.</p>
+</dd>
+  </div>
+  
+  <div class="accordion">
     <dt>Learning more about Github</dt>
     <dd>You can learn more about Github with a great guide on <a href="https://www.codecademy.com/learn/learn-git" target="blank">Codecademy</a>.</dd>
   </div>
   
   <div class="accordion">
     <dt>Learning more about Jekyll</dt>
-    <dd>You can read about Jekyll on the <a href="http://jekyllrb.com/" target="blank">official website</a>.</dd>
+    <dd>You can read all about Jekyll on the <a href="http://jekyllrb.com/" target="blank">official website</a>. </br></br>You'll find a guide to installing Jekyll so you can test your website on your computer, and lots on what you can do with this powerful platform.</dd>
   </div>
   
   <div class="accordion">
@@ -143,8 +166,8 @@
   </div>
   
   <div class="accordion">
-    <dt>Presenting a section differently</dt>
-    <dd>If you'd like to create a new layout, you'll need a combination of the skills we used to add a new section. </br>That means you'll need some HTML and CSS. Best to get started at <a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Codecademy</a>. </br>The expressions in curly brackets were Liquid. You can <a href="https://docs.shopify.com/themes/liquid-documentation/basics" target="_blank">get started with Liquid here</a>. </br>The navlinks.yml file was a YAML list. Here is the <a href="http://yaml.org/" target="_blank">official YAML website</a> and a more beginner-friendly <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">Wikipedia YAML page</a>. </br>This is a powerful combination of skills that allows you create and manipulate data objects through your hand-crafted layouts on your own website.</dd>
+    <dt>Presenting a section differently | Resources</dt>
+    <dd>If you'd like to create a new layout, you'll need a combination of the skills we used to add a new section. </br>That means you'll need some HTML and CSS. Best to get started at <a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Codecademy</a>. </br>The expressions in curly brackets were Liquid. You can <a href="https://docs.shopify.com/themes/liquid-documentation/basics" target="_blank">get started with Liquid here</a>. </br>The navlinks.yml file was a YAML list. Here is the <a href="http://yaml.org/" target="_blank">official YAML website</a> and a more beginner-friendly <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">Wikipedia YAML page</a>. </br></br>This is a powerful combination of skills that allows you create and manipulate data objects through your hand-crafted layouts on your own website.</dd>
   </div>
   
   <div class="accordion">
@@ -259,9 +282,11 @@
       </div>
       
       <div class="one-half column footer-shares">
-      	<h3>Share The Love</h3>
+      	
+      	<h3>Share Jekyll School</h3>
+      	
       	<div class="social-share">
-  <a class="share-item" id="social-twitter" href="https://twitter.com/intent/tweet?text=&url=127.0.0.1:4000//questions-and-ideas/ target="_blank" title="Share Jekyll School on Twitter">
+  <a class="share-item" id="social-twitter" href="https://twitter.com/intent/tweet?text=Questions and Ideas&url=127.0.0.1:4000//questions-and-ideas/ target="_blank" title="Share Jekyll School on Twitter">
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -277,7 +302,7 @@
 	</svg>
   </a>
   
-  <a class="share-item" id="social-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&title=&url=&source=127.0.0.1:4000//questions-and-ideas/&summary=A simple, free and open-source tool for students and teachers to create and publish websites together" target="_blank" title="Share Jekyll School on LinkedIn">
+  <a class="share-item" id="social-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&title=Questions and Ideas&url=&source=127.0.0.1:4000//questions-and-ideas/&summary=A simple, free way for students and teachers to learn to code, create and publish websites together" target="_blank" title="Share Jekyll School on LinkedIn">
   	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -293,7 +318,7 @@
 	</svg>
   </a>
 
-  <a class="share-item" id="social-facebook" href="https://www.facebook.com/sharer/sharer.php?t=&u=127.0.0.1:4000//questions-and-ideas/" target="_blank" title="Share Jekyll School on Facebook">
+  <a class="share-item" id="social-facebook" href="https://www.facebook.com/sharer/sharer.php?t=Questions and Ideas&u=127.0.0.1:4000//questions-and-ideas/" target="_blank" title="Share Jekyll School on Facebook">
   	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -313,6 +338,8 @@
 
       <div class="one-quarter column about-us">
       	<a href="https://github.com/damianeoloan/jekyll-school"><h4>Jekyll School on Github</h4></a>
+
+      	<a href="/questions-and-ideas/"><h4>Questions and Ideas</h4></a>
       </div>
     </div>
   </div>

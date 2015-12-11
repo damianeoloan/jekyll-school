@@ -22,13 +22,37 @@
                </br>Learn more about web colours with <a href="https://en.wikipedia.org/wiki/Web_colors" target="_blank">Wikipedia</a>.
                </br>You can create your own colour palette with help from tools like <a href="http://paletton.com/" target="_blank">Paletton</a>.
 
+- id: customisation
+  title: Customising your profile
+  description: !xml | 
+               <p>If you look at <a href="students/">Dan's profile</a>, you'll see he customised it and now you can too.</p>
+               <p>That's because Dan created a file for custom CSS. Find it at /_sass/_custom.scss.</p>
+               <p>Dan's username is dan so he named his CSS class person-profile-dan.</p>
+               <pre>
+               .person-profile-dan {
+               background: #D0011B;
+               border-radius: 4rem; 
+               }
+               </pre>
+               <p>If you already know some CSS, you can do this now too.</p>
+               <p>Dan was able to do this because he added some liquid and HTML to the index page at /students/.</p>
+               <pre>
+               {% if student.custom == true %}
+               div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person"
+               {% else %}
+               div class="person-profile" itemscope itemtype="https://schema.org/Person"
+               {% endif %}
+               </pre>
+               <p>In this way everyone can gradually customise the site more and more.</p>
+
 - id: learning-github
   title: Learning more about Github
   description: You can learn more about Github with a great guide on <a href="https://www.codecademy.com/learn/learn-git" target="blank">Codecademy</a>.
 
 - id: learning-jekyll
   title: Learning more about Jekyll
-  description: You can read about Jekyll on the <a href="http://jekyllrb.com/" target="blank">official website</a>.
+  description: You can read all about Jekyll on the <a href="http://jekyllrb.com/" target="blank">official website</a>.
+               </br></br>You'll find a guide to installing Jekyll so you can test your website on your computer, and lots on what you can do with this powerful platform.
 
 - id: jekyll-yaml-data-files
   title: Adding a new section
@@ -58,12 +82,12 @@
                <p>You could replace matches with Charity Events, Concerts, Homework Assignments, whatever you like.</p>
 
 - id: jekyll-skills
-  title: Presenting a section differently
+  title: Presenting a section differently | Resources
   description: If you'd like to create a new layout, you'll need a combination of the skills we used to add a new section.
                </br>That means you'll need some HTML and CSS. Best to get started at <a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Codecademy</a>.
                </br>The expressions in curly brackets were Liquid. You can <a href="https://docs.shopify.com/themes/liquid-documentation/basics" target="_blank">get started with Liquid here</a>.
                </br>The navlinks.yml file was a YAML list. Here is the <a href="http://yaml.org/" target="_blank">official YAML website</a> and a more beginner-friendly <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">Wikipedia YAML page</a>.
-               </br>This is a powerful combination of skills that allows you create and manipulate data objects through your hand-crafted layouts on your own website.
+               </br></br>This is a powerful combination of skills that allows you create and manipulate data objects through your hand-crafted layouts on your own website.
 
 - id: mistakes
   title: What if I break something?

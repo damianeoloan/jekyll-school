@@ -286,11 +286,11 @@ footer.main-footer {
  */
 a.home-button {
   float: right;
-  color: #f2f2f2;
+  color: #f0e53e;
   text-align: center;
   clear: both; }
   a.home-button p {
-    border: 2px solid #f2f2f2;
+    border: 2px solid #f0e53e;
     border-radius: 4rem;
     padding: 20px 40px;
     font-size: 2.4rem;
@@ -303,10 +303,11 @@ section.home-feature {
   background: #020017;
   color: #f2f2f2; }
   section.home-feature h1, section.home-feature h2 {
-    text-align: right; }
-  section.home-feature > h2 {
-    max-width: 75%;
-    float: right; }
+    text-align: right;
+    margin-right: 5%; }
+  section.home-feature h2 {
+    float: right;
+    max-width: 90%; }
   section.home-feature .home-feature-logo {
     padding: 5% 0 10%; }
     section.home-feature .home-feature-logo svg {
@@ -322,7 +323,8 @@ a.home-button:hover {
   text-decoration: none; }
   a.home-button:hover p {
     background: #f0e53e;
-    color: #020017; }
+    color: #020017;
+    border: 2px solid #e8e8e8; }
 
 /**
  * Homepage #how-it-works section
@@ -407,10 +409,11 @@ section.next-steps {
   section.next-steps a.next-steps-button {
     float: none; }
     section.next-steps a.next-steps-button p {
-      background: #020017;
-      color: #f2f2f2;
       display: inline-block;
-      margin: 0 40px; }
+      margin: 0 40px;
+      background: #020017;
+      color: #f0e53e;
+      border: 2px solid #f0e53e; }
   section.next-steps a.next-steps-button:hover p, section.next-steps a.next-steps-button:target p {
     background: #f0e53e;
     color: #020017;
@@ -590,13 +593,13 @@ dl.q-and-i {
     padding: 20px; }
   dl.q-and-i dt {
     margin: 0 auto 10px;
-    max-width: 80%;
     font-size: 3rem;
     font-weight: 400;
     background: #e8e8e8;
     text-align: center; }
   dl.q-and-i dd {
-    margin: 0 0 40px;
+    max-width: 80%;
+    margin: 0 auto 40px;
     background: #020017;
     color: #f2f2f2;
     display: none; }
@@ -753,3 +756,10 @@ dl.q-and-i div:hover dd, dl.q-and-i div:target dd {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/**
+ * Add your CSS or SASS here to customise your site.
+ */
+.person-profile-dan {
+  background: #D0011B;
+  border-radius: 4rem; }

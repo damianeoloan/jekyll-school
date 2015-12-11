@@ -184,11 +184,11 @@ footer.main-footer {
 
 %button {
   float: right;
-  color: $white-color;
+  color: $yellow-color;
   text-align: center;
   clear: both;
   p {
-    border: 2px solid $white-color;
+    border: 2px solid $yellow-color;
     border-radius: 4rem;
     padding: $spacing-unit/2 $spacing-unit;
     font-size: 2.4rem;
@@ -206,10 +206,11 @@ footer.main-footer {
   @extend %vertical-rhythm;
   h1, h2 {
     text-align: right;
+    margin-right: 5%; 
   }
-  > h2 {
-    max-width: 75%;
+  h2 {
     float: right;
+    max-width: 90%;
   }
   .home-feature-logo {
     padding: 5% 0 10%;
@@ -233,7 +234,8 @@ a.home-button:hover {
   text-decoration: none;
   p {
     background: $yellow-color;
-    color: $navy-color;     
+    color: $navy-color;
+    border: 2px solid $grey-color-light;
   }
 }
 /**
@@ -350,10 +352,11 @@ section.next-steps {
   a.next-steps-button {
     float: none;
     p {
-      background: $navy-color;
-      color: $white-color;
       display: inline-block;
       margin: 0 $spacing-unit;
+      background: $navy-color;
+      color: $yellow-color;
+      border: 2px solid $yellow-color;
     }
   }
   a.next-steps-button:hover p, a.next-steps-button:target p {
@@ -579,14 +582,14 @@ dl.q-and-i {
   }
   dt {
     margin: 0 auto $spacing-unit/4;
-    max-width: 80%;
     font-size: 3rem;
     font-weight: 400;
     background: $grey-color-light;
     text-align: center;
   }
   dd {
-    margin: 0 0 $spacing-unit;
+    max-width: 80%;
+    margin: 0 auto $spacing-unit;
     background: $navy-color;
     color: $white-color;
     display: none;

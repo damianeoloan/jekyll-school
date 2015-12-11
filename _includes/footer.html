@@ -77,12 +77,19 @@
       </div>
       
       <div class="one-half column footer-shares">
-      	<h3>Share The Love</h3>
+      	{% if site.title == 'Jekyll School' %}
+      	<h3>Share Jekyll School</h3>
+      	{% else %}
+      	<h3>{{ site.title }}</h3>
+      	<a href="www.jekyll-school.com"><h5>Made with Jekyll School</h5></a>
+      	{% endif %}
       	{% include social-share.html %}
       </div>
 
       <div class="one-quarter column about-us">
       	<a href="https://github.com/damianeoloan/jekyll-school"><h4>Jekyll School on Github</h4></a>
+
+      	<a href="{% for page in site.pages %}{% if page.title == 'Questions and Ideas' %}{{ page.url }}{% endif %}{% endfor %}"><h4>Questions and Ideas</h4></a>
       </div>
     </div>
   </div>

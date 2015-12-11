@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /students/
+title: Students
 ---
 <h2  class="collection-heading">Hello! This is our <a href="{{ site.url }}">Jekyll School</a> students group. </h2>
 
@@ -9,15 +10,21 @@ permalink: /students/
 <div class="grid-container">
   {% for student in site.students %}
   {% unless forloop.last == true %}
-  <div class="one-third column">
-	<a href="{{ student.url }}"><div class="person-profile" itemscope itemtype="https://schema.org/Person">
-	  <img src="{{ student.img-path }}" alt="{{ student.name }}" itemprop="image">
+    <div class="one-third column">
+	    <a href="{{ student.url }}">
+        {% if student.custom == true %}
+        <div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person">
+        {% else %}
+        <div class="person-profile" itemscope itemtype="https://schema.org/Person">
+        {% endif %}
 
-	  <h3 itemprop="name">{{ student.name }}</h3>
+	      <img src="{{ student.img-path }}" alt="{{ student.name }}" itemprop="image">
 
-	  <p itemprop="description">{{ student.introduction | truncate: 60 }}</p>
-	</div></a>
-  </div>
+	      <h3 itemprop="name">{{ student.name }}</h3>
+
+	      <p itemprop="description">{{ student.introduction | truncate: 60 }}</p>
+	    </div></a>
+    </div>
   {% endunless %}
   {% endfor %}
 </div>

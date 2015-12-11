@@ -15,4 +15,5 @@ citation: http://www.aaronsw.com/weblog/dweck
 categories:
 tags:
 ---
+<!-- Add your markdown here. See http://markdowntutorial.com/ for a getting-started guide -->
 "But as I’ve grown, I’ve found that’s hardly the end of the story. I’ve started to get good at leading a conversation or cracking people up with a joke. I like telling stories at a party a story or buzzing about a room saying ‘hi’ to people. I get a rush from it! Sure, I’m still not the most party-oriented person I know, but I no longer think we fit into any neat introversion/extroversion buckets."

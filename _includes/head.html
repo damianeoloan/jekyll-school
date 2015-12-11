@@ -5,33 +5,30 @@
   <meta name="author" content="{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}">
   <meta name="robots" content="index, follow">
 
-  <title>{% if page.title %}{{ page.title | replace: '-', ' ' | append: ' | ' }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if page.title %}{{ page.title | append: ' | '  }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
 
   <!-- Analytics, remove this and add your own here -->
-  {% if site.url == '' %}
-
-  {% endif %}
 
   <!-- Schema.org -->
-  <meta itemprop="name" content="{{ page.title | replace: '-', ' ' | append: ' | beiaierlan.com' }}">
-  <meta itemprop="description" content="{{ page.description }}">
+  <meta itemprop="name" content="{{ page.title | append: ' | ' }}{{ site.title }}">
+  <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
   <!-- Twitter -->  
-  <meta itemprop="image" content="http://www.example.com/image.jpg">
+  <meta itemprop="image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@北爱尔兰">
-  <meta name="twitter:title" content="{{ page.title | replace: '-', ' ' | append: ' | beiaierlan.com' }}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta name="twitter:creator" content="@北爱尔兰">
+  <meta name="twitter:site" content="{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | append: ' | ' }}{{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
+  <meta name="twitter:creator" content="{% if page.author %}{{ page.author }}{% elsif page.username %}{{ page.username }}{% else %}{{ site.title }}{% endif %}">
   <!-- Twitter Summary card images must be at least 120x120px -->
-  <meta name="twitter:image" content="http://www.example.com/image.jpg">
+  <meta name="twitter:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ site.title }} | {{ page.title | replace: '-', ' '  }}">
+  <meta property="og:title" content="{{ site.title  | append: ' | '}}{{ page.title }}">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
-  <meta property="og:image" content="http://example.com/image.jpg" />
-  <meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:site_name" content="北爱尔兰 | beiaierlan.com" />
+  <meta property="og:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
+  <meta property="og:site_name" content="{[ site.title ]}" />
   <meta property="article:tag" content="{{ page.title }}" />
   <meta property="fb:admins" content="Facebook numberic ID" />
   <!-- Copyright -->

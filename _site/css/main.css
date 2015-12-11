@@ -109,8 +109,6 @@ p {
 pre,
 code {
   font-size: 2.1em;
-  border: 1px solid #424242;
-  border-radius: 2px;
   background-color: #e8e8e8; }
 
 code {
@@ -286,12 +284,12 @@ footer.main-footer {
 /**
  * Buttons
  */
-section.home-feature a.home-button {
+a.home-button {
   float: right;
   color: #f2f2f2;
   text-align: center;
   clear: both; }
-  section.home-feature a.home-button p {
+  a.home-button p {
     border: 2px solid #f2f2f2;
     border-radius: 4rem;
     padding: 20px 40px;
@@ -319,12 +317,16 @@ section.home-feature {
     padding: 20% 0 5%; }
     section.home-feature div.home-feature-titles h2 {
       font-weight: 300; }
-  section.home-feature a.home-button:hover {
-    text-decoration: none; }
-    section.home-feature a.home-button:hover p {
-      background: #f0e53e;
-      color: #020017; }
 
+a.home-button:hover {
+  text-decoration: none; }
+  a.home-button:hover p {
+    background: #f0e53e;
+    color: #020017; }
+
+/**
+ * Homepage #how-it-works section
+ */
 section#how-it-works {
   text-align: center;
   vertical-align: middle; }
@@ -346,9 +348,6 @@ section#how-it-works {
     margin: 0 10%;
     font-size: 3rem; }
 
-/**
- * Setup steps
- */
 ol.guide {
   max-width: 100%;
   padding: 20px 12.5%;
@@ -372,8 +371,11 @@ ol.guide {
       fill: #020017; }
     ol.guide li.guide-item:nth-of-type(even) svg path {
       fill: #f2f2f2; }
-  ol.guide img {
-    vertical-align: middle; }
+  ol.guide div.guide-image {
+    height: 100%;
+    line-height: 100%; }
+    ol.guide div.guide-image img {
+      vertical-align: middle; }
   ol.guide p {
     font-size: 2.4rem;
     line-height: 3.6rem; }
@@ -393,6 +395,30 @@ ol.guide {
   ol.guide div.guide-item-divider:nth-of-type(even) {
     border-right: 1px solid #020017;
     margin-right: 30%; }
+
+/**
+ * Homepage next steps section
+ */
+section.next-steps {
+  max-width: 75%;
+  margin: 40px 12.5%;
+  text-align: center;
+  font-size: 2.4rem; }
+  section.next-steps a.next-steps-button {
+    float: none; }
+    section.next-steps a.next-steps-button p {
+      background: #020017;
+      color: #f2f2f2;
+      display: inline-block;
+      margin: 0 40px; }
+  section.next-steps a.next-steps-button:hover p, section.next-steps a.next-steps-button:target p {
+    background: #f0e53e;
+    color: #020017;
+    border: 2px solid #020017; }
+  section.next-steps a.navy-grey p {
+    background: #e8e8e8;
+    color: #020017;
+    border: 2px solid #020017; }
 
 /**
  * Students/admins indexes
@@ -454,6 +480,9 @@ a div.person-profile:hover {
   padding: 0 20px;
   box-sizing: border-box; }
 
+/**
+ * Posts
+ */
 blockquote p {
   font-size: 2.6rem;
   line-height: 4rem;
@@ -527,6 +556,9 @@ ul.post-list {
     margin-right: 15%;
     line-height: 3rem; }
 
+/**
+ * Pagination
+ */
 div.pagination {
   display: table;
   margin: 0 auto 40px;
@@ -545,6 +577,43 @@ div.pagination {
     border: 2px solid #020017;
     border-radius: 4rem;
     padding: 10px 20px; }
+
+/**
+ * Questions and ideas
+ */
+dl.q-and-i {
+  width: 66.66%;
+  margin: 40px 16.66% 40px;
+  font-size: 2.4rem;
+  line-height: 3.6rem; }
+  dl.q-and-i dt, dl.q-and-i dd {
+    padding: 20px; }
+  dl.q-and-i dt {
+    margin: 0 auto 10px;
+    max-width: 80%;
+    font-size: 3rem;
+    font-weight: 400;
+    background: #e8e8e8;
+    text-align: center; }
+  dl.q-and-i dd {
+    margin: 0 0 40px;
+    background: #020017;
+    color: #f2f2f2;
+    display: none; }
+    dl.q-and-i dd a {
+      color: #f0e53e; }
+    dl.q-and-i dd pre {
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      max-width: 80%;
+      color: #020017; }
+  dl.q-and-i p {
+    font-size: 2.4rem;
+    line-height: 3.6rem; }
+
+dl.q-and-i div:hover dd, dl.q-and-i div:target dd {
+  display: block; }
 
 /**
  * Syntax highlighting styles

@@ -199,7 +199,7 @@ footer.main-footer {
 /**
  * Home feature
  */
-
+ 
  section.home-feature {
   background: $navy-color;
   color: $white-color;
@@ -225,17 +225,21 @@ footer.main-footer {
         font-weight: 300;
     }
   }
-  a.home-button {
-    @extend %button;
-  }
-  a.home-button:hover {
-    text-decoration: none;
-    p {
-      background: $yellow-color;
-      color: $navy-color;     
-    }
+}
+a.home-button {
+  @extend %button;
+}
+a.home-button:hover {
+  text-decoration: none;
+  p {
+    background: $yellow-color;
+    color: $navy-color;     
   }
 }
+/**
+ * Homepage #how-it-works section
+ */
+
 section#how-it-works {
   text-align: center;
   vertical-align: middle;
@@ -263,10 +267,6 @@ section#how-it-works {
     font-size: 3rem;
   }
 }
-
-/**
- * Setup steps
- */
 
  ol.guide {
   max-width: 100%;
@@ -302,9 +302,14 @@ section#how-it-works {
       }
     }
   }
-  img {
+  div.guide-image {
+    height: 100%;
+    line-height: 100%;
+    img {
     vertical-align: middle;
+    }
   }
+  
   p {
     font-size: 2.4rem;
     line-height: 3.6rem;
@@ -333,11 +338,39 @@ section#how-it-works {
   }
 }
 
+/**
+ * Homepage next steps section
+ */
+
+section.next-steps {
+  max-width: 75%;
+  margin: $spacing-unit 12.5%;
+  text-align: center;
+  font-size: 2.4rem;
+  a.next-steps-button {
+    float: none;
+    p {
+      background: $navy-color;
+      color: $white-color;
+      display: inline-block;
+      margin: 0 $spacing-unit;
+    }
+  }
+  a.next-steps-button:hover p, a.next-steps-button:target p {
+    background: $yellow-color;
+    color: $navy-color;
+    border: 2px solid $navy-color;
+  }
+  a.navy-grey p {
+    background: $grey-color-light;
+    color: $navy-color;
+    border: 2px solid $navy-color;
+  }
+}
 
 /**
  * Students/admins indexes
  */
-
 .collection-heading {
   margin-top: $spacing-unit;
 }
@@ -407,6 +440,9 @@ a div.person-profile:hover {
   box-sizing: border-box;
 }
 
+/**
+ * Posts
+ */
 blockquote {
   p {
     font-size: 2.6rem;
@@ -501,6 +537,9 @@ ul.post-list {
   }
 }
 
+/**
+ * Pagination
+ */
 div.pagination {
   display: table;
   margin: 0 auto $spacing-unit;
@@ -523,5 +562,53 @@ div.pagination {
     border: 2px solid $navy-color;
     border-radius: 4rem;
     padding: $spacing-unit/4 $spacing-unit/2;
+  }
+}
+
+/**
+ * Questions and ideas
+ */
+
+dl.q-and-i {
+  width: 66.66%;
+  margin: $spacing-unit 16.66% $spacing-unit;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  dt, dd {
+    padding: $spacing-unit/2;
+  }
+  dt {
+    margin: 0 auto $spacing-unit/4;
+    max-width: 80%;
+    font-size: 3rem;
+    font-weight: 400;
+    background: $grey-color-light;
+    text-align: center;
+  }
+  dd {
+    margin: 0 0 $spacing-unit;
+    background: $navy-color;
+    color: $white-color;
+    display: none;
+    a {
+      color: $yellow-color;
+    }
+    pre {
+      font-family: $code-font-family;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      max-width: 80%;
+      color: $navy-color;
+    }
+  }
+  p {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+
+dl.q-and-i div:hover, dl.q-and-i div:target {
+  dd {
+    display: block;
   }
 }

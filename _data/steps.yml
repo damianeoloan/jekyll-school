@@ -158,7 +158,7 @@
   img-path: /images/setup/setup9.jpg
   img-alt: "Merging a Pull Request"
   text: "Got all the profile pages ready? Let's start writing.
-        </br>Something to share? Create a post just like the examples, save it in a folder named after you inside _students or _admins.
+        </br>Create posts just like the examples, save them in a folder named after you inside _students or _admins. The date format in the filename is important.
         </br>Create a new branch for it, make a Pull Request and you're done!"
   svg: !xml |
        <?xml version="1.0" encoding="UTF-8" standalone="no"?>

@@ -9,7 +9,7 @@ layout: default
 	  
 	  	<h2>{{ site.description }}</h2>
 
-	  	<a href="#value-icons" class="home-button"><p>see how it works</p></a>
+	  	<a href="#how-it-works" class="home-button"><p>see how it works</p></a>
 	  </div>
 
 	  <div class="one-third column home-feature-logo">
@@ -48,7 +48,7 @@ layout: default
   <li class="guide-item">
     <h2>{{ step.h2 }}</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="{{ step.img-path }}" alt="{{ step.img-alt }}">
   	  </div>
 
@@ -63,6 +63,13 @@ layout: default
   {% endunless %}
   {% endfor %}  
 </ol>
+
+<section class="next-steps">
+  <h4>Turn your site into <strong>whatever you want it to be</strong>, gaining skills along the way.</h4>
+  <a href="/questions-and-ideas" class="home-button next-steps-button navy-grey"><p>ideas and questions</p></a>
+
+  <a href="https://github.com" class="home-button next-steps-button" target="blank"><p>get started on Github</p></a>
+</section>
 <!-- End Jekyll School contents -->
 {% endif %}
 <!-- Start themed homepage contents -->

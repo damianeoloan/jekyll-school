@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: /questions-and-ideas/
+---
+<dl class="q-and-i">
+  {% for step in site.data.next-steps %}
+  <div class="accordion">
+    <dt>{{ step.title }}</dt>
+    <dd>{{ step.description }}</dd>
+  </div>
+  {% endfor %}
+</dl>
+
+<section class="next-steps">
+  <h4>Ready for your new Jekyll School website?</h4>
+    <a href="/index.html#how-it-works" class="home-button next-steps-button"><p>see how it works</p></a>
+</section>

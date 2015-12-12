@@ -1,0 +1,123 @@
+- id: questions
+  title: Where can I ask questions?
+  description: If you have any questions about a Jekyll website, the community at <a href="https://talk.jekyllrb.com/" target="_blank">Jekyll Talk</a> can help.
+               </br>For questions about a Jekyll School site, perhaps you could include that in the title of your post.
+
+- id: secure-account
+  title: Secure your Github account
+  description: Go to Settings in your Github account, and under Security turn on Two-factor authentication.
+               </br>Each time you sign in, you'll need a code from a text message or authentication app.
+
+- id: personalise-colours
+  title: Personalise the colour scheme
+  description: Jekyll School is made with three main colors - navy, red and yellow for links.
+               </br>You can find them in <a href="https://github.com/damianeoloan/jekyll-school/blob/master/css/main.scss" target="_blank">/css/main.scss</a>.
+               </br>You can simply change the color code for one you want.
+               </br>For example, to give Jekyll School a rasta theme, change the navy to "#009900", the red to "#FF0000" and the yellow to "#FFFF00".
+
+- id: finding-colours
+  title: Finding and choosing colors
+  description: Using Firefox browser on any web page (for example your school website), look in the Tools menu and under Web Developer click on Eyedropper.
+               </br>Now just point your mouse over any colour you like. Click to copy it, then paste it in the <a href="https://github.com/damianeoloan/jekyll-school/blob/master/css/main.scss" target="blank">/css/main.scss file.
+               </br>Learn more about web colours with <a href="https://en.wikipedia.org/wiki/Web_colors" target="_blank">Wikipedia</a>.
+               </br>You can create your own colour palette with help from tools like <a href="http://paletton.com/" target="_blank">Paletton</a>.
+
+- id: customisation
+  title: Customising your profile
+  description: !xml | 
+               <p>If you look at <a href="students/">Dan's profile</a>, you'll see he customised it and now you can too.</p>
+               <p>That's because Dan created a file for custom CSS. Find it at /_sass/_custom.scss.</p>
+               <p>Dan's username is dan so he named his CSS class person-profile-dan.</p>
+               <pre>
+               .person-profile-dan {
+               background: #D0011B;
+               border-radius: 4rem; 
+               }
+               </pre>
+               <p>If you already know some CSS, you can do this now too.</p>
+               <p>Dan was able to do this because he added some liquid and HTML to the index page at /students/.</p>
+               <pre>
+               {% if student.custom == true %}
+               div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person"
+               {% else %}
+               div class="person-profile" itemscope itemtype="https://schema.org/Person"
+               {% endif %}
+               </pre>
+               <p>In this way everyone can gradually customise the site more and more.</p>
+
+- id: learning-github
+  title: Learning more about Github
+  description: You can learn more about Github with a great guide on <a href="https://www.codecademy.com/learn/learn-git" target="blank">Codecademy</a>.
+
+- id: learning-jekyll
+  title: Learning more about Jekyll
+  description: You can read all about Jekyll on the <a href="http://jekyllrb.com/" target="blank">official website</a>.
+               </br></br>You'll find a guide to installing Jekyll so you can test your website on your computer, and lots on what you can do with this powerful platform.
+
+- id: jekyll-yaml-data-files
+  title: Adding a new section
+  description: !xml |
+               <p>Let's imagine you made a Jekyll School site for a school football team.</p>
+               <p>You'd like to add a new matches section.</p>
+               <p>Create a file in the _data folder called matches.yml.</p>
+               <p>Add the details in the same format as the navlinks you'll find there, for example:</p>
+               <pre>
+               - title: Jekyll United v Hugo City
+                 date: 31/12/2015
+                 img-path: "/images/jekyll-united.jpg"
+                 description: Ok guys, this one's important!
+               </pre>
+               <p>Now go into the /pages folder, make a copy of admins-index.html and rename it matches.html. This will be your matches page.</p>
+               <p>On line 2 under permalink, replace /admins/ with /matches/</p>
+               <p>On line 10, replace <pre>{% for admin in site.admins %}</pre>
+               <p>with <pre>{% for match in site.data.matches %}</pre></p>
+               <p>On line 12, delete the link tags with <pre>a href="{{ admin.url }}>"></pre> and <pre>/a</pre> and in the snippet <pre>itemscope itemtype="https://schema.org/Person</pre>replace 'Person' with 'Event'.</p>
+               <p>On line 13, replace <pre>{{ admin.img-path }}</pre> with <pre>{{ match.img-path }}</pre> and replace <pre>{{ admin.name }}</pre> with <pre>{{ match.name }}</pre></p>
+               <p>On line 15, replace <pre>{{ admin.name }}</pre></p>
+               <p>with <pre>{{ match.name }}</pre></p>
+               <p>On line 17, replace <pre>{{ admin.introduction | truncate: 60 }}</pre></p>
+               <p>with <pre>{{ match.description }}</pre></p>
+               <p>Now you have a page with your match. If you'd like to add it to the main navigation menu, open the navlinks file in _data.</p>
+               <p>Now just add a new entry in the place you want. Call it Matches and under url, give the permalink at /matches/</p>
+               <p>You could replace matches with Charity Events, Concerts, Homework Assignments, whatever you like.</p>
+
+- id: jekyll-skills
+  title: Presenting a section differently | Resources
+  description: If you'd like to create a new layout, you'll need a combination of the skills we used to add a new section.
+               </br>That means you'll need some HTML and CSS. Best to get started at <a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Codecademy</a>.
+               </br>The expressions in curly brackets were Liquid. You can <a href="https://docs.shopify.com/themes/liquid-documentation/basics" target="_blank">get started with Liquid here</a>.
+               </br>The navlinks.yml file was a YAML list. Here is the <a href="http://yaml.org/" target="_blank">official YAML website</a> and a more beginner-friendly <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">Wikipedia YAML page</a>.
+               </br></br>This is a powerful combination of skills that allows you create and manipulate data objects through your hand-crafted layouts on your own website.
+
+- id: mistakes
+  title: What if I break something?
+  description: Using Github, create a new branch called 'experiment'.
+               </br>Try something. Break something. Reset everything. Start again.
+               </br>When it works and you're happy, save it and submit your pull request to publish.
+
+- id: help
+  title: What if I need help?
+  description: If you need help, reach out to the communities on <a href="https://talk.jekyllrb.com/" target="_blank">Jekyll Talk</a> and <a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a>.
+
+- id: security
+  title: Will my website be secure?
+  description: Hackers steal information saved in databases. But Jekyll sites have no databases. This reduces the attack surface, which is the best protection.
+               </br>All the site members should immediately add two-factor authentication to their Github account.
+               </br>Nobody should ever add any private information to any of the files.
+               </br>If you follow these instructions without exception, your website will be highly secure by any standard.
+
+- id: privacy
+  title: Is my information private?
+  description: Keep your Github account information a secret. 
+               </br>Until you commit your changes on Github, nobody can see them.
+               </br>Until your pull request is merged into the master branch, your changes won't be published online.
+               </br>Everything else is </strong>completely public</strong>.
+               </br>Like everything on the internet, <strong>once you publish it, it lives forever</strong>.
+
+- id: domains
+  title: Can I include a Jekyll School site on our school website?
+  description: Sure. Let's say your site is called 'Jekyll School Theatre Club'.
+               </br>Ask your school IT team to create a subdomain called 'theatre'.
+               </br>So your website would be <a title="Sorry, there's no theatre club 囧">theatre.jekyllschool.com</a>.
+               </br>You can automatically deploy your website from Github by following this <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank">guide to custom domains</a>.
+               </br>Or you can ask your the folk who manage the site to add the '_site' folder in your Github repository directly by FTP.

@@ -1,22 +1,58 @@
 ---
 layout: default
 ---
-<figure class="post-figure">
-  <figcaption>{{ page.img-caption }}</figcaption>
+<section class="image-page">
+  <figure class="post-figure">
+    <figcaption>{{ page.img-caption }}</figcaption>
   
-  <img src="{{ page.img-path }}" alt="{{ page.img-description }}">
-</figure>
+    <img src="{{ page.img-path }}" alt="{{ page.img-description }}">
+  </figure>
 
-<a href="/{{ page.author }}"><h2>Created on {{ page.date | date: "%-d %b, %y" }} by 
-  {% for student in site.students %}
-    {% if student.username == page.author %}
-    <span>{{ student.name }}</span>
+  <h2>Created on {{ page.date | date: "%-d %b, %y" }}</h2>
+</section>
+
+<div class="posts-list">
+  <a href="/{{ page.author }}"><h2>Latest from  
+    {% for student in site.students %}
+      {% if student.username == page.author %}
+      <span>{{ student.name }}</span>
+      {% endif %}
+    {% endfor %}
+
+    {% for admin in site.admins %}
+      {% if admin.username == page.author %}
+      <span>{{ admin.name }}</span>
+      {% endif %}
+    {% endfor %}
+  </h2></a>
+  {% for post in site.posts %}
+    {% if post.author == page.author %}
+      {% if post.layout == 'image-post' %}
+    <a href="{{ post.url }}"><div class="post-thumbnail image-post">
+      <figure>
+        <figcaption>{{ post.img-caption }}</figcaption>
+        
+        <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+      </figure>
+    </div></a>
+    {% elsif post.layout == 'short-form' %}
+    <a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+      <blockquote>
+      <p>{{ post.content }}</p>
+      {% if post.quote-ref %}
+        <footer>{{ post.quote-ref }}</footer>
+      {% endif %}
+    </blockquote>
+    </div></a>
+    {% else %}
+    <a href="{{ post.url }}"><div class="post-thumbnail long-form">
+      <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.excerpt }}</p>
+        <a class="read-more" href="{{ post.url }}">read more</a>
+      </article>
+    </div></a>
+    {% endif %}
     {% endif %}
   {% endfor %}
-
-  {% for admin in site.admins %}
-    {% if admin.username == page.author %}
-    <span>{{ admin.name }}</span>
-    {% endif %}
-  {% endfor %}
-</h2></a>
+</div>

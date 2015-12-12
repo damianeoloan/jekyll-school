@@ -5,12 +5,13 @@ name: "Dan D"
 username: dan
 email: dan@example.com
 img-path: /images/students/dan.svg
-introduction: Hey, Dan here. Proud captain of the football team.
+introduction: Hey, Dan here. I customised my profile :)
 favourites:
   city: "LA"
   game: "WoW"
   hobby: "Skating"
 github-link:
+custom: true
 ---
 Before they sold out ethical stumptown, pug irony svgkickstarter. Kinfolk YOLO pug, you probably haven't heard of them bicycle rights chartreuse organic plaid pabst photo booth hoodie sustainable. Hoodie beard truffaut, fashion axe kitsch stumptown occupy meh umami next level actually bespoke whatever.
 

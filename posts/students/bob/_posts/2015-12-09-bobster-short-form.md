@@ -15,4 +15,5 @@ citation: http://www.aaronsw.com/weblog/nummi
 categories:
 tags:
 ---
-"Let’s say you really want to get in shape, but never remember to exercise. You can keep beating yourself up for your forgetfulness, or you can put a system in place. Maybe you have your roommate check to see that you exercise before you leave your house in the morning or you set a regular time to consistently go to the gym together. Life isn’t a high school exam; you don’t have to solve your problems on your own."
+<!-- Add your markdown here. See http://markdowntutorial.com/ for a getting-started guide -->
+"Life isn’t a high school exam; you don’t have to solve your problems on your own."

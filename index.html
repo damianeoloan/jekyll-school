@@ -2,20 +2,22 @@
 layout: default
 ---
 <section class="home-feature">
-  <div class="grid-container">
-    <div class="row">
-	  <div class="two-thirds column home-feature-titles">
-	  	<h1>{{ site.title }}</h1>
-	  
-	  	<h2>{{ site.description }}</h2>
-
-	  	<a href="#value-icons" class="home-button"><p>see how it works</p></a>
-	  </div>
-
-	  <div class="one-third column home-feature-logo">
-	  	{% include logo.html %}
-	  </div>
-	</div>
+	<div class="home-logo">
+    {% unless site.title == 'Jekyll School' %}
+    <img src="logo.svg" role="logo" alt="{{ site.name | append: ' Logo'}}">
+    {% else %}
+    {% include logo.html %}
+    {% endunless %}
+  </div>
+  <div class="home-titles">
+    <h1 class="site-title">{{ site.title }}</h1>
+    
+    <h3 class="site-description">{{ site.description }}</h3>
+    {% if site.title == 'Jekyll School' %}
+	  <a href="#how-it-works" class="home-button"><p>see how it works</p></a>
+    {% else %}
+    <a href="#latest-posts" class="home-button"><p>see the latest</p></a>
+    {% endif %}
   </div>
 </section>
 
@@ -40,7 +42,7 @@ layout: default
 	  </div>
   </div>
 
-  <p class="standout">These tools, as well as Jekyll, are all free.</br>Let's get started creating your site...</p>
+  <p class="standout">Let's get started creating your site...</p>
 </section>
 
 <ol class="guide">
@@ -48,11 +50,11 @@ layout: default
   <li class="guide-item">
     <h2>{{ step.h2 }}</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="{{ step.img-path }}" alt="{{ step.img-alt }}">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    {{ step.svg }}
   	    <p>{{ step.text }}</p>
   	  </div>
@@ -63,8 +65,64 @@ layout: default
   {% endunless %}
   {% endfor %}  
 </ol>
-<!-- End Jekyll School contents -->
-{% endif %}
-<!-- Start themed homepage contents -->
-<!-- End themed homepage contents -->
 
+<section class="next-steps">
+  <h4>Turn your site into <strong>whatever you want it to be</strong>, gaining skills along the way.</h4>
+  <a href="/questions-and-ideas" class="home-button next-steps-button navy-grey"><p>questions and ideas</p></a>
+
+  <a href="https://github.com" class="home-button next-steps-button" target="blank"><p>get started on Github</p></a>
+</section>
+<!-- End Jekyll School contents -->
+
+<!-- Start themed homepage contents -->
+{% else %}
+<section id="latest-posts" class="home-posts">
+  <h2>Latest from {{ site.title }}</h2>
+  <ul class="post-list">
+  {% for post in site.posts | limit:3 %}
+    {% if post.layout == 'image-post' %}
+    <li>
+      <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
+      <a href="{{ post.url }}"><div class="post-thumbnail image-post">
+        <figure>
+          <figcaption>{{ post.img-caption }}</figcaption>
+        
+          <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+        </figure>
+      </div></a>
+    </li>
+    {% elsif post.layout == 'short-form' %}
+    <li>
+      <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
+      <a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+        <blockquote>
+        <p>{{ post.content }}</p>
+        {% if post.quote-ref %}
+          <footer>{{ post.quote-ref }}</footer>
+        {% endif %}
+        </blockquote>
+      </div></a>
+    </li>
+    {% else %}
+    <li>
+      <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
+      <a href="{{ post.url }}"><div class="post-thumbnail long-form">
+        <article>
+          <h1>{{ post.title }}</h1>
+          <p>{{ post.excerpt }}</p>
+          <a class="read-more" href="{{ post.url }}">read more</a>
+        </article>
+      </div></a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</div>
+</section>
+
+<section class="next-steps">
+  <a href="students/" class="home-button next-steps-button navy-grey"><p>meet the group</p></a>
+
+  <a href="latest/" class="home-button next-steps-button" target="blank"><p>see all our posts</p></a>
+</section>
+<!-- End themed homepage contents -->
+{% endif %}

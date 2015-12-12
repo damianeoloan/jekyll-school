@@ -5,43 +5,46 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Alice A, Bob B, Craig C, Dan D, Eve E, Faith F, Mallory M, Oscar O, Peggy P, Sybil S, Trent T">
+  <meta name="author" content="Damian O'Loan">
   <meta name="robots" content="index, follow">
 
   <title>Jekyll School</title>
-  <meta name="description" content="A simple, free and open-source tool for students and teachers to create and publish websites together">
+  <meta name="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
 
   <!-- Analytics, remove this and add your own here -->
-  
 
   <!-- Schema.org -->
-  <meta itemprop="name" content=" | beiaierlan.com">
-  <meta itemprop="description" content="">
+  <meta itemprop="name" content=" | Jekyll School">
+  <meta itemprop="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
   <!-- Twitter -->  
-  <meta itemprop="image" content="http://www.example.com/image.jpg">
+  <meta itemprop="image" content="jekyllschool.github.iologo.svg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@北爱尔兰">
-  <meta name="twitter:title" content=" | beiaierlan.com">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:creator" content="@北爱尔兰">
+  <meta name="twitter:site" content="@jekyll-school">
+  <meta name="twitter:title" content="Jekyll School">
+  <meta name="twitter:description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
+  <meta name="twitter:creator" content="Jekyll School">
   <!-- Twitter Summary card images must be at least 120x120px -->
-  <meta name="twitter:image" content="http://www.example.com/image.jpg">
+  <meta name="twitter:image" content="jekyllschool.github.iologo.svg">
   <!-- Open Graph -->
   <meta property="og:title" content="Jekyll School | ">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="/index.html" />
-  <meta property="og:image" content="http://example.com/image.jpg" />
-  <meta property="og:description" content="A simple, free and open-source tool for students and teachers to create and publish websites together" />
-  <meta property="og:site_name" content="北爱尔兰 | beiaierlan.com" />
+  <meta property="og:image" content="jekyllschool.github.iologo.svg" />
+  <meta property="og:description" content="A simple, free way for students and teachers to learn to code, create and publish websites together" />
+  <meta property="og:site_name" content="{[ site.title ]}" />
   <meta property="article:tag" content="" />
   <meta property="fb:admins" content="Facebook numberic ID" />
-
+  <!-- Copyright -->
   <link rel="copyright" href="creativecommons.org/licenses/by-nc/3.0/">
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/vendors/normalize.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="127.0.0.1:4000//">
-  <link rel="alternate" type="application/rss+xml" title="Jekyll School" href="127.0.0.1:4000//feed.xml" />
+  <link rel="canonical" href="jekyllschool.github.io/">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Jekyll School" href="jekyllschool.github.io/feed.xml" />
 </head>
 
 
@@ -79,19 +82,10 @@
 
       <main>  
         <section class="home-feature">
-  <div class="grid-container">
-    <div class="row">
-	  <div class="two-thirds column home-feature-titles">
-	  	<h1>Jekyll School</h1>
-	  
-	  	<h2>A simple, free and open-source tool for students and teachers to create and publish websites together</h2>
-
-	  	<a href="#value-icons" class="home-button"><p>see how it works</p></a>
-	  </div>
-
-	  <div class="one-third column home-feature-logo">
-	  	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+	<div class="home-logo">
+    
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="jekyll-logo" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
     <title>Jekyll School&nbsp;Logo</title>
     <desc>Created with Sketch.</desc>
@@ -111,8 +105,15 @@
         </g>
     </g>
 </svg>
-	  </div>
-	</div>
+    
+  </div>
+  <div class="home-titles">
+    <h1 class="site-title">Jekyll School</h1>
+    
+    <h3 class="site-description">A simple, free way for students and teachers to learn to code, create and publish websites together</h3>
+    
+	  <a href="#how-it-works" class="home-button"><p>see how it works</p></a>
+    
   </div>
 </section>
 
@@ -150,7 +151,7 @@
 	  </div>
   </div>
 
-  <p class="standout">These tools, as well as Jekyll, are all free.</br>Let's get started creating your site...</p>
+  <p class="standout">Let's get started creating your site...</p>
 </section>
 
 <ol class="guide">
@@ -158,11 +159,11 @@
   <li class="guide-item">
     <h2>Getting Started</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup1.jpg" alt="Github account signup form">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -190,11 +191,11 @@
   <li class="guide-item">
     <h2>Register Your Group</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup2.jpg" alt="Registering a Github Organisation">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -220,11 +221,11 @@
   <li class="guide-item">
     <h2>By Invite Only</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup3.jpg" alt="Inviting people to a Github Organisation">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -250,11 +251,11 @@
   <li class="guide-item">
     <h2>Creating Your Fork</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup4.jpg" alt="Creating a fork of a Github repository">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -269,7 +270,7 @@
     </g>
 </svg>
 
-  	    <p>Go to <a class="blue-link" href="https://github.com/damianeoloan/jekyll-school" target="_blank">https://github.com/damianeoloan/jekyll-school</a> and click on Fork in the top right.</p>
+  	    <p>Go to <a class="blue-link" href="https://github.com/damianeoloan/jekyll-school" target="_blank">Jekyll School on Github</a> and click on Fork in the top right.</p>
   	  </div>
     </div>
   </li>
@@ -280,11 +281,11 @@
   <li class="guide-item">
     <h2>Making It Unique</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup5.jpg" alt="Editing a Jekyll config file">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -299,7 +300,7 @@
     </g>
 </svg>
 
-  	    <p>Find _config.yml in the list, click on it then click on the pen in the top right to edit.</p>
+  	    <p>Find _config.yml in the list, click on it then click on the pen in the top right to edit. </br>You'll find instructions in the file.</p>
   	  </div>
     </div>
   </li>
@@ -310,11 +311,11 @@
   <li class="guide-item">
     <h2>Growing a Branch</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup6.jpg" alt="Creating a new branch of a Github repository">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -340,11 +341,11 @@
   <li class="guide-item">
     <h2>Submitting the Changes</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup7.jpg" alt="Creating a Pull Request">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -370,11 +371,11 @@
   <li class="guide-item">
     <h2>Making it Final</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup8.jpg" alt="Merging a Pull Request">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -400,11 +401,11 @@
   <li class="guide-item">
     <h2>Write Something Great</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup9.jpg" alt="Merging a Pull Request">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -419,7 +420,7 @@
   </g>
 </svg>
 
-  	    <p>Got all the profile pages ready? Let's start writing. </br>Something to share? Create a post just like the examples, save it in a folder named after you inside _students or _admins. </br>Create a new branch for it, make a Pull Request and you're done!</p>
+  	    <p>Got all the profile pages ready? Let's start writing. </br>Create posts just like the examples, save them in a folder named after you inside _students or _admins. The date format in the filename is important. </br>Create a new branch for it, make a Pull Request and you're done!</p>
   	  </div>
     </div>
   </li>
@@ -430,11 +431,11 @@
   <li class="guide-item">
     <h2>Published on the Internets!</h2>
     <div class="grid-container">
-      <div class="one-half column">
+      <div class="one-half column guide-image">
   	    <img src="/images/setup/setup10.jpg" alt="Pushing a repository to Github pages">
   	  </div>
 
-  	  <div class="one-half column">
+  	  <div class="one-half column guide-texts">
   	    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
   <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -448,17 +449,23 @@
     </g>
   </g>
 </svg>
-  	    <p>Head over to settings to rename the website. Use exactly the organisation name you chose in step 2. </br>Your website's waiting for you now at yourorganisationname.github.io - <strong>congratulations!</strong></p>
+  	    <p>Head over to settings to rename the website. Use exactly the organisation name you chose in step 2. </br>Your website's waiting for you now at orgname.github.io - <strong>congratulations!</strong></p>
   	  </div>
     </div>
   </li>
   
     
 </ol>
+
+<section class="next-steps">
+  <h4>Turn your site into <strong>whatever you want it to be</strong>, gaining skills along the way.</h4>
+  <a href="/questions-and-ideas" class="home-button next-steps-button navy-grey"><p>questions and ideas</p></a>
+
+  <a href="https://github.com" class="home-button next-steps-button" target="blank"><p>get started on Github</p></a>
+</section>
 <!-- End Jekyll School contents -->
 
 <!-- Start themed homepage contents -->
-<!-- End themed homepage contents -->
 
 
       </main>
@@ -542,9 +549,11 @@
       </div>
       
       <div class="one-half column footer-shares">
-      	<h3>Share The Love</h3>
+      	
+      	<h3>Share Jekyll School</h3>
+      	
       	<div class="social-share">
-  <a class="share-item" id="social-twitter" href="https://twitter.com/intent/tweet?text=&url=127.0.0.1:4000//index.html target="_blank" title="Share Jekyll School on Twitter">
+  <a class="share-item" id="social-twitter" href="https://twitter.com/intent/tweet?text=&url=jekyllschool.github.io/index.html target="_blank" title="Share Jekyll School on Twitter">
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -560,7 +569,7 @@
 	</svg>
   </a>
   
-  <a class="share-item" id="social-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&title=&url=&source=127.0.0.1:4000//index.html&summary=A simple, free and open-source tool for students and teachers to create and publish websites together" target="_blank" title="Share Jekyll School on LinkedIn">
+  <a class="share-item" id="social-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&title=&url=&source=jekyllschool.github.io/index.html&summary=A simple, free way for students and teachers to learn to code, create and publish websites together" target="_blank" title="Share Jekyll School on LinkedIn">
   	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -576,7 +585,7 @@
 	</svg>
   </a>
 
-  <a class="share-item" id="social-facebook" href="https://www.facebook.com/sharer/sharer.php?t=&u=127.0.0.1:4000//index.html" target="_blank" title="Share Jekyll School on Facebook">
+  <a class="share-item" id="social-facebook" href="https://www.facebook.com/sharer/sharer.php?t=&u=jekyllschool.github.io/index.html" target="_blank" title="Share Jekyll School on Facebook">
   	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 	    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -596,6 +605,8 @@
 
       <div class="one-quarter column about-us">
       	<a href="https://github.com/damianeoloan/jekyll-school"><h4>Jekyll School on Github</h4></a>
+
+      	<a href="/questions-and-ideas/"><h4 class="lower">Questions and Ideas</h4></a>
       </div>
     </div>
   </div>

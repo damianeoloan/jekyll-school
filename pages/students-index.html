@@ -1,23 +1,28 @@
 ---
 layout: default
 permalink: /students/
+title: Students
 ---
 <h2  class="collection-heading">Hello! This is our <a href="{{ site.url }}">Jekyll School</a> students group. </h2>
 
 <p class="collection-introduction">This is your group page where people can find you and you can say hello.</br>To appear here, just add a file to the _students folder following the template in AliceA.md.</br>Later, you can edit this paragraph inside /_students/index.html to add a group introduction.</p>
 
-<div class="grid-container">
+<ul class="grid-container person-index">
   {% for student in site.students %}
-  {% unless forloop.last == true %}
-  <div class="one-third column">
-	<a href="{{ student.url }}"><div class="person-profile" itemscope itemtype="https://schema.org/Person">
-	  <img src="{{ student.img-path }}" alt="{{ student.name }}" itemprop="image">
+    <li class="person-column">
+	    <a href="{{ student.url }}">
+        {% if student.custom == true %}
+        <div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person">
+        {% else %}
+        <div class="person-profile" itemscope itemtype="https://schema.org/Person">
+        {% endif %}
 
-	  <h3 itemprop="name">{{ student.name }}</h3>
+	      <img src="{{ student.img-path }}" alt="{{ student.name }}" itemprop="image">
 
-	  <p itemprop="description">{{ student.introduction | truncate: 60 }}</p>
-	</div></a>
-  </div>
-  {% endunless %}
+	      <h3 itemprop="name">{{ student.name }}</h3>
+
+	      <p itemprop="description">{{ student.introduction | truncate: 60 }}</p>
+	    </div></a>
+    </li>
   {% endfor %}
-</div>
+</ul>

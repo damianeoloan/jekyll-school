@@ -90,6 +90,11 @@ dl.q-and-i {
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
+  &:hover dt, &:target dt {
+    dd {
+      display: block;
+    }
+  }
   @include media-query($tablet) {
     font-size: 2rem;
     line-height: 3rem;
@@ -104,10 +109,4 @@ dl.q-and-i {
     width: 85%;
     margin: $spacing-unit 7.5%;
   }
-}
-
-dl.q-and-i div:hover, dl.q-and-i div:target { 
- dd {
-   display: block;
- }
 }

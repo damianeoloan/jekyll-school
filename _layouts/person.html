@@ -4,7 +4,7 @@ layout: default
 <div class="grid-container person-page"  itemscope itemtype="https://schema.org/Person">
   <div class="two-fifths column profile">
 	<div class="person-profile">
-	  <img src="{{ page.img-path }}" alt="{{ page.name }}" itemprop="image">
+	  <img src="{{ page.img-path| prepend: site.baseurl }}" alt="{{ page.name }}" itemprop="image">
 
 	  <h3 itemprop="name">{{ page.name }}</h3>
 
@@ -41,15 +41,15 @@ layout: default
 	{% for post in site.posts %}
 	  {% if post.author == page.username %}
 	    {% if post.layout == 'image-post' %}
-		<a href="{{ post.url }}"><div class="post-thumbnail image-post">
+		<a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail image-post">
 		  <figure>
 		  	<figcaption>{{ post.img-caption }}</figcaption>
 		  	
-		    <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+		    <img src="{{ post.img-path | prepend: site.baseurl }}" alt="{{ post.img-description }}">
 		  </figure>
 		</div></a>
 		{% elsif post.layout == 'short-form' %}
-		<a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+		<a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail blockquote">
 		  <blockquote>
 		  <p>{{ post.content }}</p>
 		  {% if post.quote-ref %}
@@ -58,11 +58,11 @@ layout: default
 		</blockquote>
 		</div></a>
 		{% else %}
-		<a href="{{ post.url }}"><div class="post-thumbnail long-form">
+		<a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail long-form">
 		  <article>
 		    <h1>{{ post.title }}</h1>
 		    <p>{{ post.excerpt }}</p>
-		    <a class="read-more" href="{{ post.url }}">read more</a>
+		    <a class="read-more" href="{{ post.url| prepend: site.baseurl }}">read more</a>
 		  </article>
 		</div></a>
 		{% endif %}

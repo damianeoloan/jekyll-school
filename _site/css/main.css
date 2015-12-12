@@ -13,7 +13,9 @@ html {
     color: #020017;
     background-color: #f2f2f2;
     -webkit-text-size-adjust: 100%;
-    height: 100%; }
+    height: 100%;
+    margin: 0;
+    max-width: 1600px; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -153,7 +155,10 @@ p {
 
   figure figcaption {
     font-size: 1.8rem;
-    line-height: 2.7rem; } }
+    line-height: 2.7rem; }
+
+  h1, h2, h3, h4, h5, h6, p, figcaption {
+    -webkit-font-smoothing: subpixel-antialiased; } }
 /**
  * Code formatting
  */

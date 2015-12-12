@@ -4,7 +4,7 @@ layout: default
 <section class="home-feature">
 	<div class="home-logo">
     {% unless site.title == 'Jekyll School' %}
-    <img src="logo.svg" role="logo" alt="{{ site.name | append: ' Logo'}}">
+    <img src="{{ logo.jpg | prepend: site.baseurl }}" role="logo" alt="{{ site.name | append: ' Logo'}}">
     {% else %}
     {% include logo.html %}
     {% endunless %}
@@ -51,7 +51,7 @@ layout: default
     <h2>{{ step.h2 }}</h2>
     <div class="grid-container">
       <div class="one-half column guide-image">
-  	    <img src="{{ step.img-path }}" alt="{{ step.img-alt }}">
+  	    <img src="{{ step.img-path | prepend: site.baseurl }}" alt="{{ step.img-alt }}">
   	  </div>
 
   	  <div class="one-half column guide-texts">
@@ -68,7 +68,7 @@ layout: default
 
 <section class="next-steps">
   <h4>Turn your site into <strong>whatever you want it to be</strong>, gaining skills along the way.</h4>
-  <a href="/questions-and-ideas" class="home-button next-steps-button navy-grey"><p>questions and ideas</p></a>
+  <a href="{{ "questions-and-ideas/" | prepend: site.baseurl }}" class="home-button next-steps-button navy-grey"><p>questions and ideas</p></a>
 
   <a href="https://github.com" class="home-button next-steps-button" target="blank"><p>get started on Github</p></a>
 </section>
@@ -83,18 +83,18 @@ layout: default
     {% if post.layout == 'image-post' %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail image-post">
+      <a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail image-post">
         <figure>
           <figcaption>{{ post.img-caption }}</figcaption>
         
-          <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+          <img src="{{ post.img-path| prepend: site.baseurl }}" alt="{{ post.img-description }}">
         </figure>
       </div></a>
     </li>
     {% elsif post.layout == 'short-form' %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+      <a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail blockquote">
         <blockquote>
         <p>{{ post.content }}</p>
         {% if post.quote-ref %}
@@ -106,11 +106,11 @@ layout: default
     {% else %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail long-form">
+      <a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail long-form">
         <article>
           <h1>{{ post.title }}</h1>
           <p>{{ post.excerpt }}</p>
-          <a class="read-more" href="{{ post.url }}">read more</a>
+          <a class="read-more" href="{{ post.url| prepend: site.baseurl }}">read more</a>
         </article>
       </div></a>
     </li>
@@ -120,9 +120,9 @@ layout: default
 </section>
 
 <section class="next-steps">
-  <a href="students/" class="home-button next-steps-button navy-grey"><p>meet the group</p></a>
+  <a href="{{ "students/" | prepend: site.baseurl }}" class="home-button next-steps-button navy-grey"><p>meet the group</p></a>
 
-  <a href="latest/" class="home-button next-steps-button" target="blank"><p>see all our posts</p></a>
+  <a href="{{ "latest/" | prepend: site.baseurl }}" class="home-button next-steps-button" target="blank"><p>see all our posts</p></a>
 </section>
 <!-- End themed homepage contents -->
 {% endif %}

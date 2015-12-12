@@ -10,14 +10,14 @@ title: Students
 <ul class="grid-container person-index">
   {% for student in site.students %}
     <li class="person-column">
-	    <a href="{{ student.url }}">
+	    <a href="{{ student.url| prepend: site.baseurl }}">
         {% if student.custom == true %}
         <div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person">
         {% else %}
         <div class="person-profile" itemscope itemtype="https://schema.org/Person">
         {% endif %}
 
-	      <img src="{{ student.img-path }}" alt="{{ student.name }}" itemprop="image">
+	      <img src="{{ student.img-path| prepend: site.baseurl }}" alt="{{ student.name }}" itemprop="image">
 
 	      <h3 itemprop="name">{{ student.name }}</h3>
 

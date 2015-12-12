@@ -10,7 +10,7 @@ layout: default
 <h2>Created on {{ page.date | date: "%-d %b, %y" }}</h2>
 
 <div class="posts-list">
-  <a href="/{{ page.author }}"><h2>Latest from  
+  <a href="{{ page.author | prepend: site.baseurl }}"><h2>Latest from  
     {% for student in site.students %}
       {% if student.username == page.author %}
       <span>{{ student.name }}</span>
@@ -26,7 +26,7 @@ layout: default
   {% for post in site.posts %}
     {% if post.author == page.author %}
       {% if post.layout == 'image-post' %}
-    <a href="{{ post.url }}"><div class="post-thumbnail image-post">
+    <a href="{{ post.url | prepend: site.baseurl }}"><div class="post-thumbnail image-post">
       <figure>
         <figcaption>{{ post.img-caption }}</figcaption>
         
@@ -34,7 +34,7 @@ layout: default
       </figure>
     </div></a>
     {% elsif post.layout == 'short-form' %}
-    <a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+    <a href="{{ post.url | prepend: site.baseurl }}"><div class="post-thumbnail blockquote">
       <blockquote>
       <p>{{ post.content }}</p>
       {% if post.quote-ref %}
@@ -43,7 +43,7 @@ layout: default
     </blockquote>
     </div></a>
     {% else %}
-    <a href="{{ post.url }}"><div class="post-thumbnail long-form">
+    <a href="{{ post.url | prepend: site.baseurl }}"><div class="post-thumbnail long-form">
       <article>
         <h1>{{ post.title }}</h1>
         <p>{{ post.excerpt }}</p>

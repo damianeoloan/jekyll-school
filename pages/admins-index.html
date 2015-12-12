@@ -10,8 +10,8 @@ title: Staff
 <ul class="grid-container person-index">
   {% for admin in site.admins %}
   <li class="person-column">
-	<a href="{{ admin.url }}"><div class="person-profile" itemscope itemtype="https://schema.org/Person">
-	  <img src="{{ admin.img-path }}" alt="{{ admin.name }}" itemprop="image">
+	<a href="{{ admin.url| prepend: site.baseurl }}"><div class="person-profile" itemscope itemtype="https://schema.org/Person">
+	  <img src="{{ admin.img-path| prepend: site.baseurl }}" alt="{{ admin.name }}" itemprop="image">
 
 	  <h3 itemprop="name">{{ admin.name }}</h3>
 

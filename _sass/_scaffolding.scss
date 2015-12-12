@@ -105,9 +105,8 @@ dl.q-and-i {
     margin: $spacing-unit 7.5%;
   }
 }
-
-dl.q-and-i div:hover, dl.q-and-i div:target { 
- dd {
-   display: block;
- }
+dl.q-and-i div:hover, dl.q-and-i div:target {
+  dd {
+    display: block;
+  }
 }

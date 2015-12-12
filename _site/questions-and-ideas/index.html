@@ -12,7 +12,17 @@
   <meta name="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
 
   <!-- Analytics, remove this and add your own here -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-71335621-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  
   <!-- Schema.org -->
   <meta itemprop="name" content="Questions and Ideas | Jekyll School">
   <meta itemprop="description" content="A simple, free way for students and teachers to learn to code, create and publish websites together">
@@ -102,7 +112,7 @@
   
   <div class="accordion">
     <dt>Customising your profile</dt>
-    <dd><p><p>If you look at <a href="students/">Dan's profile</a>, you'll see he customised it and now you can too.</p>
+    <dd><p><p>If you look at <a href="{{ "students/" | prepend: site.baseurl | prepend: | site.url }}">Dan's profile</a>, you'll see he customised it and now you can too.</p>
 <p>That's because Dan created a file for custom CSS. Find it at /_sass/_custom.scss.</p>
 <p>Dan's username is dan so he named his CSS class person-profile-dan.</p>
 <pre>

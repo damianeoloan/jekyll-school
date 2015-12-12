@@ -35,7 +35,7 @@ title: Posts
         <figure>
           <figcaption>{{ post.img-caption }}</figcaption>
         
-          <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+          <img src="{{ post.img-path | prepend: site.baseurl }}" alt="{{ post.img-description }}">
         </figure>
       </div></a>
     </li>

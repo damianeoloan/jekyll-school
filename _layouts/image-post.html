@@ -5,7 +5,7 @@ layout: default
   <figure class="post-figure">
     <figcaption>{{ page.img-caption }}</figcaption>
   
-    <img src="{{ page.img-path }}" alt="{{ page.img-description }}">
+    <img src="{{ page.img-path| prepend: site.baseurl  }}" alt="{{ page.img-description }}">
   </figure>
 
   <h2>Created on {{ page.date | date: "%-d %b, %y" }}</h2>
@@ -32,7 +32,7 @@ layout: default
       <figure>
         <figcaption>{{ post.img-caption }}</figcaption>
         
-        <img src="{{ post.img-path }}" alt="{{ post.img-description }}">
+        <img src="{{ post.img-path| prepend: site.baseurl  }}" alt="{{ post.img-description }}">
       </figure>
     </div></a>
     {% elsif post.layout == 'short-form' %}

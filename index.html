@@ -4,7 +4,7 @@ layout: default
 <section class="home-feature">
 	<div class="home-logo">
     {% unless site.title == 'Jekyll School' %}
-    <img src="logo.svg" role="logo" alt="{{ site.name | append: ' Logo'}}">
+    <img src="{{ logo.jpg | prepend: site.baseurl }}" role="logo" alt="{{ site.name | append: ' Logo'}}">
     {% else %}
     {% include logo.html %}
     {% endunless %}
@@ -51,7 +51,7 @@ layout: default
     <h2>{{ step.h2 }}</h2>
     <div class="grid-container">
       <div class="one-half column guide-image">
-  	    <img src="{{ step.img-path }}" alt="{{ step.img-alt }}">
+  	    <img src="{{ step.img-path | prepend: site.baseurl }}" alt="{{ step.img-alt }}">
   	  </div>
 
   	  <div class="one-half column guide-texts">

@@ -330,14 +330,14 @@ footer.main-footer {
   footer.main-footer svg path {
     fill: #f2f2f2; }
   footer.main-footer h4 {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.8rem;
     margin-bottom: 0; }
   footer.main-footer h4.lower {
     margin-top: 20px; }
   footer.main-footer .footer-shares h3 {
     margin-bottom: 0;
-    font-weight: 100; }
+    font-weight: 300; }
   footer.main-footer .footer-shares a svg:hover path {
     fill: #f0e53e; }
   footer.main-footer .social-share svg {
@@ -401,7 +401,7 @@ section.home-feature {
   section.home-feature h1 {
     margin: 16rem auto 20px; }
   section.home-feature h3 {
-    font-weight: 100;
+    font-weight: 300;
     margin: auto auto 20px; }
   section.home-feature a.home-button {
     margin-bottom: 40px;

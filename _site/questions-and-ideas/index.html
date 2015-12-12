@@ -196,6 +196,19 @@ div class="person-profile" itemscope itemtype="https://schema.org/Person"
   <h2>Ready to get started with Jekyll?</h2>
     <a href="/index.html#how-it-works" class="home-button next-steps-button"><p>see how it works</p></a>
 </section>
+
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">  
+    $(document).ready(function(){
+        if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+            $(".accordion dt").click(function(){  
+                // Update '.change-this-class' to the class of your menu
+                // Leave this empty, that's the magic sauce
+            });
+        }
+    });
+</script>  
       </main>
 
     <footer class="main-footer">

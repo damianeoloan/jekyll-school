@@ -7,10 +7,9 @@ title: Students
 
 <p class="collection-introduction">This is your group page where people can find you and you can say hello.</br>To appear here, just add a file to the _students folder following the template in AliceA.md.</br>Later, you can edit this paragraph inside /_students/index.html to add a group introduction.</p>
 
-<div class="grid-container">
+<ul class="grid-container person-index">
   {% for student in site.students %}
-  {% unless forloop.last == true %}
-    <div class="one-third column">
+    <li class="person-column">
 	    <a href="{{ student.url }}">
         {% if student.custom == true %}
         <div class="{{ student.username | prepend: 'person-profile person-profile-' }}" itemscope itemtype="https://schema.org/Person">
@@ -24,7 +23,6 @@ title: Students
 
 	      <p itemprop="description">{{ student.introduction | truncate: 60 }}</p>
 	    </div></a>
-    </div>
-  {% endunless %}
+    </li>
   {% endfor %}
-</div>
+</ul>

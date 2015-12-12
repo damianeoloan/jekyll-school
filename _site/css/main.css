@@ -29,7 +29,7 @@ section.home-feature,
 /**
  * Clearfix
  */
-.grid-container:after {
+.grid-container:after, section.home-feature:after {
   content: "";
   display: table;
   clear: both; }
@@ -103,6 +103,58 @@ p {
   font-size: 2.1rem;
   line-height: 3.6rem; }
 
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 3.0rem; }
+
+  h2 {
+    font-size: 2.7rem; }
+
+  h3 {
+    font-size: 2.4rem; }
+
+  h4 {
+    font-size: 2.2rem; }
+
+  h5 {
+    font-size: 2.0rem; }
+
+  h6 {
+    font-size: 1.8rem; }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.8rem; }
+
+  figure figcaption {
+    font-size: 2rem;
+    line-height: 3rem; } }
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 2.5rem; }
+
+  h2 {
+    font-size: 2.3rem; }
+
+  h3 {
+    font-size: 2.1rem; }
+
+  h4 {
+    font-size: 2.0rem; }
+
+  h5 {
+    font-size: 1.8rem; }
+
+  h6 {
+    font-size: 1.6rem; }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.7rem; }
+
+  figure figcaption {
+    font-size: 1.8rem;
+    line-height: 2.7rem; } }
 /**
  * Code formatting
  */
@@ -195,6 +247,13 @@ main {
 .site-title {
   float: left; }
 
+@media screen and (max-width: 800px) {
+  .site-header h1 {
+    margin: 10px 0 auto;
+    padding: 0 10px; } }
+@media screen and (max-width: 800px) {
+  .site-header h1 {
+    font-size: 3rem; } }
 .site-nav {
   float: right;
   line-height: 56px; }
@@ -206,9 +265,9 @@ main {
     display: inline-block;
     padding: 0 13.33333px; }
     .site-nav .page-link:not(:first-child) {
-      margin-left: 40px; }
+      margin-left: 20px; }
     .site-nav .page-link:last-child {
-      margin-right: 40px; }
+      margin-right: 20px; }
   @media screen and (max-width: 800px) {
     .site-nav {
       position: absolute;
@@ -237,15 +296,15 @@ main {
         padding: 40px;
         margin-top: 2px;
         display: none; }
-      .site-nav:hover .trigger {
+      .site-nav:hover .trigger, .site-nav:target .trigger {
         display: block; }
-        .site-nav:hover .trigger .page-link {
+        .site-nav:hover .trigger .page-link, .site-nav:target .trigger .page-link {
           display: block;
           margin: 0;
           padding: 0 40px; }
-          .site-nav:hover .trigger .page-link:not(:first-child) {
+          .site-nav:hover .trigger .page-link:not(:first-child), .site-nav:target .trigger .page-link:not(:first-child) {
             margin-left: 0; }
-          .site-nav:hover .trigger .page-link:last-child {
+          .site-nav:hover .trigger .page-link:last-child, .site-nav:target .trigger .page-link:last-child {
             margin-right: 0; } }
 
 /**
@@ -265,6 +324,8 @@ footer.main-footer {
     font-weight: 100;
     font-size: 1.8rem;
     margin-bottom: 0; }
+  footer.main-footer h4.lower {
+    margin-top: 20px; }
   footer.main-footer .footer-shares h3 {
     margin-bottom: 0;
     font-weight: 100; }
@@ -280,15 +341,21 @@ footer.main-footer {
     margin-left: 40px; }
   footer.main-footer a:hover {
     color: #f0e53e; }
+  @media screen and (max-width: 800px) {
+    footer.main-footer .social-share svg {
+      width: 36px;
+      height: 36px; } }
+  @media screen and (max-width: 550px) {
+    footer.main-footer .copyright-notice, footer.main-footer .footer-shares, footer.main-footer .about-us {
+      width: 100%; } }
 
 /**
  * Buttons
  */
 a.home-button {
-  float: right;
   color: #f0e53e;
   text-align: center;
-  clear: both; }
+  display: table; }
   a.home-button p {
     border: 2px solid #f0e53e;
     border-radius: 4rem;
@@ -297,27 +364,58 @@ a.home-button {
     font-weight: 400; }
 
 /**
+ * Spacing unit
+ */
+/**
  * Home feature
  */
 section.home-feature {
+  box-sizing: border-box;
   background: #020017;
   color: #f2f2f2; }
-  section.home-feature h1, section.home-feature h2 {
-    text-align: right;
-    margin-right: 5%; }
-  section.home-feature h2 {
+  section.home-feature div.home-logo, section.home-feature div.home-titles {
     float: right;
-    max-width: 90%; }
-  section.home-feature .home-feature-logo {
-    padding: 5% 0 10%; }
-    section.home-feature .home-feature-logo svg {
-      min-width: 250px;
-      width: 80%;
-      height: inherit; }
-  section.home-feature div.home-feature-titles {
-    padding: 20% 0 5%; }
-    section.home-feature div.home-feature-titles h2 {
-      font-weight: 300; }
+    padding: 40px auto 0;
+    box-sizing: border-box; }
+  section.home-feature div.home-logo {
+    width: 40%; }
+    section.home-feature div.home-logo img, section.home-feature div.home-logo svg.jekyll-logo {
+      width: 60%;
+      height: inherit;
+      margin-top: 40px; }
+  section.home-feature div.home-titles {
+    width: 60%;
+    padding: 0 5%; }
+  section.home-feature h1, section.home-feature h3 {
+    text-align: right;
+    width: 100%; }
+  section.home-feature h1 {
+    margin: 16rem auto 20px; }
+  section.home-feature h3 {
+    font-weight: 100;
+    margin: auto auto 20px; }
+  section.home-feature a.home-button {
+    margin-bottom: 40px;
+    float: right; }
+  @media screen and (max-width: 800px) {
+    section.home-feature div.home-logo, section.home-feature div.home-titles {
+      width: 100%;
+      padding: 0 10%; }
+    section.home-feature div.home-logo {
+      text-align: center; }
+      section.home-feature div.home-logo svg.jekyll-logo {
+        width: 25%;
+        margin: 40px auto 0; }
+    section.home-feature h1 {
+      margin: 0 auto 20px; }
+    section.home-feature a.home-button {
+      margin-bottom: 20px; }
+      section.home-feature a.home-button p {
+        padding: 10px 20px;
+        font-size: 2.3rem; } }
+  @media screen and (max-width: 550px) {
+    section.home-feature div.home-logo svg.jekyll-logo {
+      width: 60%; } }
 
 a.home-button:hover {
   text-decoration: none; }
@@ -349,6 +447,21 @@ section#how-it-works {
     max-width: 80%;
     margin: 0 10%;
     font-size: 3rem; }
+  @media screen and (max-width: 800px) {
+    section#how-it-works div.home-icon {
+      width: 100%; }
+      section#how-it-works div.home-icon p {
+        font-size: 2.4rem;
+        margin-top: 0; }
+      section#how-it-works div.home-icon svg {
+        width: 20%; }
+      section#how-it-works div.home-icon svg.markdown-svg {
+        margin-top: 0; } }
+  @media screen and (max-width: 550px) {
+    section#how-it-works div.home-icon p {
+      font-size: 1.8rem; }
+    section#how-it-works div.home-icon svg {
+      width: 33.33%; } }
 
 ol.guide {
   max-width: 100%;
@@ -397,6 +510,18 @@ ol.guide {
   ol.guide div.guide-item-divider:nth-of-type(even) {
     border-right: 1px solid #020017;
     margin-right: 30%; }
+  @media screen and (max-width: 800px) {
+    ol.guide div.guide-image, ol.guide div.guide-texts {
+      width: 100%; }
+    ol.guide p {
+      margin-top: 0; } }
+  @media screen and (max-width: 550px) {
+    ol.guide li {
+      max-width: 95%; }
+    ol.guide p {
+      font-size: 1.8rem; }
+    ol.guide svg {
+      margin-top: 20px; } }
 
 /**
  * Homepage next steps section
@@ -406,23 +531,38 @@ section.next-steps {
   margin: 40px 12.5%;
   text-align: center;
   font-size: 2.4rem; }
-  section.next-steps a.next-steps-button {
-    float: none; }
-    section.next-steps a.next-steps-button p {
-      display: inline-block;
-      margin: 0 40px;
-      background: #020017;
-      color: #f0e53e;
-      border: 2px solid #f0e53e; }
-  section.next-steps a.next-steps-button:hover p, section.next-steps a.next-steps-button:target p {
-    background: #f0e53e;
-    color: #020017;
-    border: 2px solid #020017; }
-  section.next-steps a.navy-grey p {
-    background: #e8e8e8;
-    color: #020017;
-    border: 2px solid #020017; }
+  section.next-steps p {
+    display: inline-block;
+    margin: 0 40px;
+    background: #020017;
+    color: #f0e53e;
+    border: 2px solid #f0e53e; }
 
+a.next-steps-button {
+  display: inline-block; }
+
+a.next-steps-button:hover p, a.next-steps-button:target p {
+  background: #f0e53e;
+  color: #020017;
+  border: 2px solid #020017; }
+
+a.navy-grey p {
+  background: #e8e8e8;
+  color: #020017;
+  border: 2px solid #020017; }
+
+@media screen and (max-width: 800px) {
+  a.next-steps-button {
+    display: inline-block; }
+    a.next-steps-button p {
+      margin: 0 10px;
+      padding: 10px 20px; } }
+@media screen and (max-width: 800px) and (max-width: 550px) {
+  a.next-steps-button:first-of-type {
+    margin-bottom: 20px; }
+
+  h4 {
+    font-size: 2.4rem; } }
 /**
  * Students/admins indexes
  */
@@ -435,6 +575,31 @@ p.collection-introduction {
   margin-left: 12.5%;
   text-align: center; }
 
+ul.person-index {
+  list-style: none;
+  padding: 0; }
+  ul.person-index .person-column {
+    float: left;
+    width: 33%;
+    padding: 20px; }
+
+@media screen and (max-width: 800px) {
+  p.collection-introduction {
+    font-size: 2rem; }
+
+  ul.person-index li.person-column {
+    width: 50%; } }
+@media screen and (max-width: 550px) {
+  p.collection-introduction {
+    font-size: 1.8rem; }
+
+  ul.person-index li.person-column {
+    width: 100%; }
+  ul.person-index div.person-profile {
+    margin-bottom: 0; } }
+/**
+ * Person profile
+ */
 div.person-page {
   margin-top: 40px; }
 
@@ -461,8 +626,8 @@ a div.person-profile:hover {
   background: #f0e53e;
   color: #020017; }
 
-.two-fifths .profile-page {
-  margin-top: 20%; }
+div.profile-page {
+  margin-top: 0; }
 
 .profile-page {
   margin: 20px;
@@ -482,7 +647,44 @@ a div.person-profile:hover {
   border-radius: 0 0 30% 0;
   padding: 0 20px;
   box-sizing: border-box; }
+  .description p {
+    line-height: 1.4; }
 
+@media screen and (max-width: 800px) {
+  div.two-fifths.column.profile {
+    width: 70%;
+    padding: 0 10%; }
+
+  div.one-fith.column.favourite-things {
+    width: 30%;
+    border-left: 2px solid #020017;
+    text-align: left; }
+    div.one-fith.column.favourite-things p {
+      font-size: 2rem; }
+
+  div.two-fifths.column.desc-container, div.three-fifths.column.desc-container {
+    width: 100%;
+    margin-bottom: 40px; }
+    div.two-fifths.column.desc-container article, div.three-fifths.column.desc-container article {
+      padding-top: 20px; } }
+@media screen and (max-width: 550px) {
+  div.two-fifths.column.profile {
+    width: 100%;
+    padding: 0 5%; }
+
+  div.one-fifth.column.favourite-things {
+    width: 100%;
+    text-align: center; }
+    div.one-fifth.column.favourite-things p {
+      font-size: 1.8rem;
+      margin-top: 0; }
+
+  div.two-fifths.column.desc-container, div.three-fifths.column.desc-container {
+    width: 100%;
+    margin-bottom: 40px; }
+    div.two-fifths.column.desc-container article, div.three-fifths.column.desc-container article {
+      margin-top: 40px;
+      padding-top: 20px; } }
 /**
  * Posts
  */
@@ -495,8 +697,8 @@ blockquote p {
   font-weight: 400; }
 blockquote footer {
   font-size: 2rem;
-  margin-left: 70%;
-  max-width: 20%; }
+  text-align: right;
+  margin-right: 5%; }
 
 blockquote.short-form {
   max-width: 66.66%;
@@ -559,6 +761,30 @@ ul.post-list {
     margin-right: 15%;
     line-height: 3rem; }
 
+@media screen and (max-width: 800px) {
+  blockquote {
+    margin: 0; }
+    blockquote p {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      margin: 0 5%; }
+    blockquote footer {
+      max-width: 100%; }
+
+  .post-thumbnail {
+    max-width: 80%; }
+
+  figure {
+    margin: 0 2.5%; } }
+@media screen and (max-width: 550px) {
+  blockquote p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 0 2%; }
+  blockquote figure {
+    margin: 0; }
+  blockquote .post-thumbnail figcaption {
+    line-height: 3rem; } }
 /**
  * Pagination
  */
@@ -580,6 +806,14 @@ div.pagination {
     border: 2px solid #020017;
     border-radius: 4rem;
     padding: 10px 20px; }
+  @media screen and (max-width: 800px) {
+    div.pagination {
+      font-size: 2.4rem; } }
+  @media screen and (max-width: 550px) {
+    div.pagination {
+      font-size: 1.8rem; }
+      div.pagination * {
+        margin: 0 10px; } }
 
 /**
  * Questions and ideas
@@ -614,6 +848,12 @@ dl.q-and-i {
   dl.q-and-i p {
     font-size: 2.4rem;
     line-height: 3.6rem; }
+  @media screen and (max-width: 800px) {
+    dl.q-and-i {
+      font-size: 2rem;
+      line-height: 3rem; }
+      dl.q-and-i h4 {
+        font-size: 2.4rem; } }
 
 dl.q-and-i div:hover dd, dl.q-and-i div:target dd {
   display: block; }
@@ -756,6 +996,89 @@ dl.q-and-i div:hover dd, dl.q-and-i div:target dd {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/**
+ * Homepage next steps section
+ */
+section.next-steps {
+  max-width: 75%;
+  margin: 40px 12.5%;
+  text-align: center;
+  font-size: 2.4rem; }
+  section.next-steps p {
+    display: inline-block;
+    margin: 0 40px;
+    background: #020017;
+    color: #f0e53e;
+    border: 2px solid #f0e53e; }
+
+a.next-steps-button {
+  display: inline-block; }
+
+a.next-steps-button:hover p, a.next-steps-button:target p {
+  background: #f0e53e;
+  color: #020017;
+  border: 2px solid #020017; }
+
+a.navy-grey p {
+  background: #e8e8e8;
+  color: #020017;
+  border: 2px solid #020017; }
+
+@media screen and (max-width: 800px) {
+  a.next-steps-button {
+    display: inline-block; }
+    a.next-steps-button p {
+      margin: 0 10px;
+      padding: 10px 20px; } }
+@media screen and (max-width: 800px) and (max-width: 550px) {
+  a.next-steps-button:first-of-type {
+    margin-bottom: 20px; }
+
+  h4 {
+    font-size: 2.4rem; } }
+/**
+ * Questions and ideas
+ */
+dl.q-and-i {
+  width: 66.66%;
+  margin: 40px 16.66% 40px;
+  font-size: 2.4rem;
+  line-height: 3.6rem; }
+  dl.q-and-i dt, dl.q-and-i dd {
+    padding: 20px; }
+  dl.q-and-i dt {
+    margin: 0 auto 10px;
+    font-size: 3rem;
+    font-weight: 400;
+    background: #e8e8e8;
+    text-align: center; }
+  dl.q-and-i dd {
+    max-width: 80%;
+    margin: 0 auto 40px;
+    background: #020017;
+    color: #f2f2f2;
+    display: none; }
+    dl.q-and-i dd a {
+      color: #f0e53e; }
+    dl.q-and-i dd pre {
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      max-width: 80%;
+      color: #020017; }
+  dl.q-and-i p {
+    font-size: 2.4rem;
+    line-height: 3.6rem; }
+  @media screen and (max-width: 800px) {
+    dl.q-and-i {
+      font-size: 2rem;
+      line-height: 3rem; }
+      dl.q-and-i h4 {
+        font-size: 2.4rem; } }
+
+dl.q-and-i div:hover dd, dl.q-and-i div:target dd {
+  display: block; }
 
 /**
  * Add your CSS or SASS here to customise your site.

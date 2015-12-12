@@ -2,8 +2,8 @@
 layout: default
 ---
 <div class="grid-container person-page"  itemscope itemtype="https://schema.org/Person">
-  <div class="two-fifths column">
-	<div class="person-profile profile-page">
+  <div class="two-fifths column profile">
+	<div class="person-profile">
 	  <img src="{{ page.img-path }}" alt="{{ page.name }}" itemprop="image">
 
 	  <h3 itemprop="name">{{ page.name }}</h3>
@@ -15,19 +15,19 @@ layout: default
   <div class="one-fifth column favourite-things">
 	<h2>Things&nbsp;I&nbsp;&#9829;</h2>
 	{% for favourite in page.favourites %}
-	<p>{{ favourite[0] | capitalize }}</p>
-	<p>{{ favourite[1] | capitalize }}</p>
+	<p>{{ favourite[0] | downcase }}</p>
+	<p>{{ favourite[1] | downcase }}</p>
 	{% endfor %}
   </div>
 
-  <div class="two-fifths column" itemprop="description">
+  <div class="two-fifths column desc-container" itemprop="description">
   	<article class="description">
 	  <h2>In a Few Words...</h2>
 	  {{ content | truncate: 450 }}
 	</article>
   </div>
   {% else %}
-  <div class="three-fifths column" itemprop="description">
+  <div class="three-fifths column desc-container" itemprop="description">
 	<article class="description">
 	  <h2>In a Few Words...</h2>
 	  {{ content | truncate: 450 }}

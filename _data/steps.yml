@@ -61,7 +61,7 @@
 - h2: Creating Your Fork
   img-path: /images/setup/setup4.jpg
   img-alt: "Creating a fork of a Github repository"
-  text: Go to <a class="blue-link" href="https://github.com/damianeoloan/jekyll-school" target="_blank">https://github.com/damianeoloan/jekyll-school</a> and click on Fork in the top right.
+  text: Go to <a class="blue-link" href="https://github.com/damianeoloan/jekyll-school" target="_blank">Jekyll School on Github</a> and click on Fork in the top right.
   svg: !xml |
        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
        <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -180,7 +180,7 @@
   img-path: /images/setup/setup10.jpg
   img-alt: Pushing a repository to Github pages
   text: "Head over to settings to rename the website. Use exactly the organisation name you chose in step 2.
-        </br>Your website's waiting for you now at yourorganisationname.github.io - <strong>congratulations!</strong>"
+        </br>Your website's waiting for you now at orgname.github.io - <strong>congratulations!</strong>"
   svg: !xml |
        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
        <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">

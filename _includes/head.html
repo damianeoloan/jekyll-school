@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}">
+  <meta name="author" content="{% if site.title == 'Jekyll School' %}Damian O'Loan{% else %}{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}{% endif %}">
   <meta name="robots" content="index, follow">
 
   <title>{% if page.title %}{{ page.title | append: ' | '  }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>

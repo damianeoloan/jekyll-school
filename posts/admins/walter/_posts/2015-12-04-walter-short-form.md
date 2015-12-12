@@ -16,4 +16,4 @@ categories:
 tags:
 ---
 <!-- Add your markdown here. See http://markdowntutorial.com/ for a getting-started guide -->
-"In moments of great emotional stress, we revert to our worst habits: we dig in and fight harder. The real trick is not to get better at fighting — it’s to get better at stopping ourselves: at taking a deep breath, calming down, and letting our better natures take over from our worst instincts.""
+"The real trick is not to get better at fighting — it’s to get better at stopping ourselves: at taking a deep breath"

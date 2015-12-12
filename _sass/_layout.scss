@@ -60,10 +60,9 @@
   .site-header h1 {
     margin: 10px 0 auto;
     padding: 0 $spacing-unit/4;
+    font-size: 3rem;
   }
-}
-@include media-query($tablet) {
-  .site-header h1 {
+  h2 {
     font-size: 3rem;
   }
 }
@@ -85,6 +84,11 @@
     }
     &:last-child {
       margin-right: $spacing-unit/2;
+    }
+  }
+  @include media-query($desktop) {
+    h2 {
+      font-size: 3rem;
     }
   }
   @include media-query($tablet) {
@@ -141,6 +145,7 @@
  */
 footer.main-footer {
   margin-top: $spacing-unit;
+  margin-bottom: 0;
   background: $navy-color;
   color: $white-color;
   padding: $spacing-unit/2 0 $spacing-unit;
@@ -248,7 +253,7 @@ section.home-feature {
     box-sizing: border-box;
   }
   div.home-logo {
-    width: 40%;
+    width: 33.33%;
     img, svg.jekyll-logo {
     width: 60%;
     height: inherit;
@@ -256,7 +261,7 @@ section.home-feature {
     }
   }
   div.home-titles {
-    width: 60%;
+    width: 66.66%;
     padding: 0 5%;
   }
   h1, h3 {
@@ -272,6 +277,7 @@ section.home-feature {
   }
   a.home-button {
     margin-bottom: $spacing-unit;
+    margin-right: -2*$spacing-unit;
     float: right;
   }
   @include media-query($tablet) {
@@ -291,6 +297,7 @@ section.home-feature {
     }
     a.home-button {
       margin-bottom: $spacing-unit/2;
+      margin-right: 0;
       p {
         padding: $spacing-unit/4 $spacing-unit/2;
         font-size: 2.3rem;
@@ -302,6 +309,12 @@ section.home-feature {
       svg.jekyll-logo {
         width: 60%;
       }
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.4rem;
     }
   }
 }
@@ -316,197 +329,7 @@ a.home-button:hover {
     border: 2px solid $grey-color-light;
   }
 }
-/**
- * Homepage #how-it-works section
- */
-section#how-it-works {
-  text-align: center;
-  vertical-align: middle;
-  svg {
-    width: 70%;
-    height: auto;
-    path {
-      fill: $red-color;
-    }
-    rect {
-      stroke: $red-color; 
-    }
-    circle {
-      fill: $red-color;
-    }
-  }
-  svg.markdown-svg {
-    margin-top: 60px;
-  }
-  p.standout {
-    display: block;
-    clear: both;
-    max-width: 80%;
-    margin: 0 10%; 
-    font-size: 3rem;
-  }
-  @include media-query($tablet) {
-    div.home-icon {
-      width: 100%;
-      p {
-        font-size: 2.4rem;
-        margin-top: 0;
-      }
-      svg {
-        width: 20%;
-      }
-      svg.markdown-svg {
-        margin-top: 0;
-      }
-    }
-  }
-  @include media-query($mobile) {
-    div.home-icon {
-      p {
-        font-size: 1.8rem;
-      }
-      svg {
-        width: 33.33%;
-      }
-    }
-  }
-}
 
-ol.guide {
-  max-width: 100%;
-  padding: $spacing-unit/2 12.5%;
-  padding: $spacing-unit/2;
-  list-style: none;
-  text-align: center;
-  li {
-    max-width: 75%;
-    margin: 0 auto;
-    padding: $spacing-unit/2 0;
-  }
-  li.guide-item:nth-of-type(odd) {
-    background: $navy-color;
-    color: $white-color;
-    svg {
-      circle {
-        fill: $white-color;
-      }
-      path {
-        fill: $red-color;
-      }
-    }
-  }
-  li.guide-item:nth-of-type(even) {
-    background: $grey-color-light;
-    svg {
-      circle {
-        fill: $navy-color;
-      }
-      path {
-        fill: $white-color;
-      }
-    }
-  }
-  div.guide-image {
-    height: 100%;
-    line-height: 100%;
-    img {
-    vertical-align: middle;
-    }
-  } 
-  p {
-    font-size: 2.4rem;
-    line-height: 3.6rem;
-  }
-  a {
-    color: $yellow-color;
-  }
-  a.blue-link {
-    color: lighten($navy-color, 15%); 
-  }
-  svg {
-    margin-top: $spacing-unit;
-    width: 6rem;
-    height: 6rem;
-  }
-  div.guide-item-divider {
-    height: $spacing-unit;
-  }
-  div.guide-item-divider:nth-of-type(odd) {
-    border-left: 1px solid $navy-color;
-    margin-left: 30%;
-  }
-  div.guide-item-divider:nth-of-type(even) {
-    border-right: 1px solid $navy-color;
-    margin-right: 30%;
-  }
-  @include media-query($tablet) {
-    div.guide-image, div.guide-texts {
-      width: 100%;
-    }
-    p {
-      margin-top: 0;
-    }
-  }
-  @include media-query($mobile) {
-    li {
-      max-width: 95%;
-    }
-    p {
-      font-size: 1.8rem;
-    }
-    svg {
-      margin-top: $spacing-unit/2;
-    }
-  }
-}
-
-/**
- * Homepage next steps section
- */
-
-section.next-steps {
-  max-width: 75%;
-  margin: $spacing-unit 12.5%;
-  text-align: center;
-  font-size: 2.4rem;
-  p {
-      display: inline-block;
-      margin: 0 $spacing-unit;
-      background: $navy-color;
-      color: $yellow-color;
-      border: 2px solid $yellow-color;
-    }
-  }
-  a.next-steps-button {
-    display: inline-block;
-  }
-  a.next-steps-button:hover p, a.next-steps-button:target p {
-    background: $yellow-color;
-    color: $navy-color;
-    border: 2px solid $navy-color;
-  }
-  a.navy-grey p {
-    background: $grey-color-light;
-    color: $navy-color;
-    border: 2px solid $navy-color;
-  }
-  @include media-query($tablet) {
-    a.next-steps-button {
-      display: inline-block;
-      p {
-        margin: 0 $spacing-unit/4;
-        padding: $spacing-unit/4 $spacing-unit/2;
-      }
-  }
-  @include media-query($mobile) {
-    a.next-steps-button:first-of-type {
-      margin-bottom: $spacing-unit/2;
-    }
-    h4 {
-      font-size: 2.4rem;
-    }
-  }
-}
 /**
  * Students/admins indexes
  */
@@ -827,59 +650,146 @@ div.pagination {
     }
   }
 }
-
 /**
- * Questions and ideas
+ * Homepage #how-it-works section
  */
-
-dl.q-and-i {
-  width: 66.66%;
-  margin: $spacing-unit 16.66% $spacing-unit;
-  font-size: 2.4rem;
-  line-height: 3.6rem;
-  dt, dd {
-    padding: $spacing-unit/2;
+section#how-it-works {
+  text-align: center;
+  vertical-align: middle;
+  svg {
+    width: 70%;
+    height: auto;
+    path {
+      fill: $red-color;
+    }
+    rect {
+      stroke: $red-color; 
+    }
+    circle {
+      fill: $red-color;
+    }
   }
-  dt {
-    margin: 0 auto $spacing-unit/4;
-    font-size: 3rem;
-    font-weight: 400;
-    background: $grey-color-light;
-    text-align: center;
+  svg.markdown-svg {
+    margin-top: 60px;
   }
-  dd {
+  p.standout {
+    display: block;
+    clear: both;
     max-width: 80%;
-    margin: 0 auto $spacing-unit;
+    margin: 0 10%; 
+    font-size: 3rem;
+  }
+  @include media-query($tablet) {
+    div.home-icon {
+      width: 100%;
+      p {
+        font-size: 2.4rem;
+        margin-top: 0;
+      }
+      svg {
+        width: 20%;
+      }
+      svg.markdown-svg {
+        margin-top: 0;
+      }
+    }
+  }
+  @include media-query($mobile) {
+    div.home-icon {
+      p {
+        font-size: 1.8rem;
+      }
+      svg {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+ol.guide {
+  max-width: 100%;
+  padding: $spacing-unit/2 12.5%;
+  padding: $spacing-unit/2;
+  list-style: none;
+  text-align: center;
+  li {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: $spacing-unit/2 0;
+  }
+  li.guide-item:nth-of-type(odd) {
     background: $navy-color;
     color: $white-color;
-    display: none;
-    a {
-      color: $yellow-color;
-    }
-    pre {
-      font-family: $code-font-family;
-      font-size: 2rem;
-      line-height: 2.4rem;
-      max-width: 80%;
-      color: $navy-color;
+    svg {
+      circle {
+        fill: $white-color;
+      }
+      path {
+        fill: $red-color;
+      }
     }
   }
+  li.guide-item:nth-of-type(even) {
+    background: $grey-color-light;
+    svg {
+      circle {
+        fill: $navy-color;
+      }
+      path {
+        fill: $white-color;
+      }
+    }
+  }
+  div.guide-image {
+    height: 100%;
+    line-height: 100%;
+    img {
+    vertical-align: middle;
+    }
+  } 
   p {
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
+  a {
+    color: $yellow-color;
+  }
+  a.blue-link {
+    color: lighten($navy-color, 15%); 
+  }
+  svg {
+    margin-top: $spacing-unit;
+    width: 6rem;
+    height: 6rem;
+  }
+  div.guide-item-divider {
+    height: $spacing-unit;
+  }
+  div.guide-item-divider:nth-of-type(odd) {
+    border-left: 1px solid $navy-color;
+    margin-left: 30%;
+  }
+  div.guide-item-divider:nth-of-type(even) {
+    border-right: 1px solid $navy-color;
+    margin-right: 30%;
+  }
   @include media-query($tablet) {
-    font-size: 2rem;
-    line-height: 3rem;
-    h4 {
-      font-size: 2.4rem;
+    div.guide-image, div.guide-texts {
+      width: 100%;
+    }
+    p {
+      margin-top: 0;
     }
   }
-
-}
-
-dl.q-and-i div:hover, dl.q-and-i div:target {
-  dd {
-    display: block;
+  @include media-query($mobile) {
+    li {
+      max-width: 95%;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    svg {
+      margin-top: $spacing-unit/2;
+    }
   }
 }

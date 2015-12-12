@@ -16,4 +16,4 @@ categories:
 tags:
 ---
 <!-- Add your markdown here. See http://markdowntutorial.com/ for a getting-started guide -->
-"Chris Macleod calls this “epiphany addiction”: “Each time they feel like they’ve stumbled on some life changing discovery, feel energized for a bit without going on to achieve any real world changes, and then return to their default of feeling lonely and unsatisfied with their life."
+"Chris Macleod calls this “epiphany addiction”: Each time they feel like they’ve stumbled on some life changing discovery, feel energized for a bit without going on to achieve any real world changes"

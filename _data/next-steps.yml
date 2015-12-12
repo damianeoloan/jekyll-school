@@ -11,9 +11,9 @@
 - id: personalise-colours
   title: Personalise the colour scheme
   description: Jekyll School is made with three main colors - navy, red and yellow for links.
-               You can find them in <a href="https://github.com/damianeoloan/jekyll-school/blob/master/css/main.scss" target="_blank">/css/main.scss</a>.
-               You can simply change the color code for one you want.
-               For example, to give Jekyll School a rasta theme, change the navy to "#009900", the red to "#FF0000" and the yellow to "#FFFF00".
+               </br>You can find them in <a href="https://github.com/damianeoloan/jekyll-school/blob/master/css/main.scss" target="_blank">/css/main.scss</a>.
+               </br>You can simply change the color code for one you want.
+               </br>For example, to give Jekyll School a rasta theme, change the navy to "#009900", the red to "#FF0000" and the yellow to "#FFFF00".
 
 - id: finding-colours
   title: Finding and choosing colors

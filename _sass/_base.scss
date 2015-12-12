@@ -3,7 +3,7 @@
  */
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
   	* {
     box-sizing: border-box;
   }
@@ -16,6 +16,8 @@ body {
     color: $navy-color;
     background-color: $white-color;
     -webkit-text-size-adjust: 100%;
+    height: 100%;
+  }
 }
 
 /**

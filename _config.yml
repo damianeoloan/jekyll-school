@@ -6,8 +6,8 @@ twitter_username: "@jekyll-school"  # If you have a Twitter account, you can add
 description: "A simple, free way for students and teachers to learn to code, create and publish websites together" # Describe your group here, say hello! This will appear on your homepage.
 sub-description: # If you like, add more detail here, this will also appear on your homepage
 logo: "logo.svg" # This sets where to find your school logo. Add yours to the main folder of the site, it will appear on your homepage and be your default social sharing image. 
-baseurl: # the subpath of your site, e.g. /blog/. You can leave this blank.
-url: "https://damianeoloan.github.io/jekyll-school/" # the base hostname & protocol for your site, this will be yourorganisationname.github.io or later you can set a custom domain. See the /questions-and-ideas/ page
+baseurl: /jekyll-school/ # the subpath of your site, e.g. /blog/. You can leave this blank.
+url: "https://damianeoloan.github.io" # the base hostname & protocol for your site, this will be yourorganisationname.github.io or later you can set a custom domain. See the /questions-and-ideas/ page
 # Pagination
 paginate: 5 # This sets the number of posts that appear per page at /latest/
 paginate_path: posts/:num # This makes the address format of each page www.schoolname.com/posts/1 or /posts/2 etc

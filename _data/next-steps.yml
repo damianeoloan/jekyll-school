@@ -25,7 +25,7 @@
 - id: customisation
   title: Customising your profile
   description: !xml | 
-               <p>If you look at <a href="{{ "/students" | prepend: site.url }}">Dan's profile</a>, you'll see he customised it and now you can too.</p>
+               <p>If you look at <a href="http://www.jekyllschool.com/students">Dan's profile</a>, you'll see he customised it and now you can too.</p>
                <p>That's because Dan created a file for custom CSS. Find it at /_sass/_custom.scss.</p>
                <p>Dan's username is dan so he named his CSS class person-profile-dan.</p>
                <pre>

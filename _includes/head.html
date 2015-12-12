@@ -14,7 +14,7 @@
   <meta itemprop="name" content="{{ page.title | append: ' | ' }}{{ site.title }}">
   <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
   <!-- Twitter -->  
-  <meta itemprop="image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
+  <meta itemprop="image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ site.twitter_username }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | append: ' | ' }}{{ site.title }}{% else %}{{ site.title }}{% endif %}">
@@ -25,8 +25,8 @@
   <!-- Open Graph -->
   <meta property="og:title" content="{{ site.title  | append: ' | '}}{{ page.title }}">
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
-  <meta property="og:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}" />
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
   <meta property="og:site_name" content="{[ site.title ]}" />
   <meta property="article:tag" content="{{ page.title }}" />

@@ -8,7 +8,7 @@ title: Posts
     {% if post.layout == 'short-form' %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail blockquote">
+      <a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail blockquote">
         <blockquote>
           <p>{{ post.content }}</p>
           {% if post.quote-ref %}
@@ -20,18 +20,18 @@ title: Posts
     {% elsif post.layout == 'long-form' %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail long-form">
+      <a href="{{ post.url| prepend: site.baseurl }}"><div class="post-thumbnail long-form">
         <article>
           <h1>{{ post.title }}</h1>
           <p>{{ post.excerpt }}</p>
-          <a class="read-more" href="{{ post.url }}">read more</a>
+          <a class="read-more" href="{{ post.url| prepend: site.baseurl }}">read more</a>
         </article>
       </div></a>
     </li>
     {% else %}
     <li>
       <p class="post-meta">{{ post.date | date: "%-d %b, %y" }} by {% for student in site.students %}{% if student.username == post.author %}{{ student.name }}{% endif %}{% endfor %}{% for admin in site.admins %}{% if admin.username == post.author %}{{ admin.name }}{% endif %}{% endfor %}</p>
-      <a href="{{ post.url }}"><div class="post-thumbnail image-post">
+      <a href="{{ post.url | prepend: site.baseurl }}"><div class="post-thumbnail image-post">
         <figure>
           <figcaption>{{ post.img-caption }}</figcaption>
         
@@ -46,13 +46,13 @@ title: Posts
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous-page">PREV</a>
+    <a href="{{ paginator.previous_page_path| prepend: site.baseurl }}" class="previous-page">PREV</a>
   {% else %}
     <span class="previous-page">PREV</span>
   {% endif %}
   <span class="page-number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next-page">NEXT</a>
+    <a href="{{ paginator.next_page_path| prepend: site.baseurl }}" class="next-page">NEXT</a>
   {% else %}
     <span class="next-page">NEXT</span>
   {% endif %}

@@ -9,8 +9,10 @@ logo: "logo.svg" # This sets where to find your school logo. Add yours to the ma
 404: "You've taken a wrong turn somewhere and got lost." # When someone visits an unrecognised address on your website, they'll see the 404 page. This is the text that will appear on that page. 
 404-button: "back to home" # This is the button that appears below the the 404 message, see above.
 # URL settings
-baseurl: # the subpath of your site, e.g. /blog/. You can leave this blank.
+baseurl: # the subpath of your site, e.g. /blog/. You can leave this blank
 url: "http://www.jekyllschool.com/" # the base hostname & protocol for your site, this will be yourorganisationname.github.io or later you can set a custom domain. See the /questions-and-ideas/ page
+404: "You seem to have taken a wrong turn in Jekyll School" # This will appear when some visits an unrecognised address on your website
+404-button: "back to home" # This is the button text that will appear below the 404 text above
 # Pagination
 paginate: 5 # This sets the number of posts that appear per page at /latest/
 paginate_path: posts/:num # This makes the address format of each page www.schoolname.com/posts/1 or /posts/2 etc

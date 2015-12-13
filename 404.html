@@ -3,7 +3,7 @@ layout: default
 permalink: /404.html
 ---
 <section class="home-feature">
-	<div class="home-logo">
+  <div class="home-logo">
     {% unless site.title == 'Jekyll School' %}
     <img src="{{ logo.jpg | prepend: site.baseurl }}" role="logo" alt="{{ site.name | append: ' Logo'}}">
     {% else %}
@@ -15,6 +15,6 @@ permalink: /404.html
     
     <h3 class="site-description">{{ site.404 }}</h3>
 	
-	<a href="{{ site.url | prepend: site.baseurl }}" class="home-button"><p>{{ site.404-button }}</p></a>
+	  <a href="{{ site.url | prepend: site.baseurl }}" class="home-button"><p>{{ site.404-button }}</p></a>
   </div>
 </section>

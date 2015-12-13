@@ -1,4 +1,4 @@
-# Site settings
+# Basic settings
 title: "Jekyll School" # add your group name here
 author: "Damian O'Loan" # you can delete this. in any case your site members appear as the site authors, see /_includes.head.html
 email: service@jekyllschool.com # add your official contact email address here
@@ -6,6 +6,9 @@ twitter_username: "@jekyll-school"  # If you have a Twitter account, you can add
 description: "A simple, free way for students and teachers to learn to code, create and publish websites together" # Describe your group here, say hello! This will appear on your homepage.
 sub-description: # If you like, add more detail here, this will also appear on your homepage
 logo: "logo.svg" # This sets where to find your school logo. Add yours to the main folder of the site, it will appear on your homepage and be your default social sharing image. 
+404: "You've taken a wrong turn somewhere and got lost." # When someone visits an unrecognised address on your website, they'll see the 404 page. This is the text that will appear on that page. 
+404-button: "back to home" # This is the button that appears below the the 404 message, see above.
+# URL settings
 baseurl: # the subpath of your site, e.g. /blog/. You can leave this blank.
 url: "http://www.jekyllschool.com/" # the base hostname & protocol for your site, this will be yourorganisationname.github.io or later you can set a custom domain. See the /questions-and-ideas/ page
 # Pagination

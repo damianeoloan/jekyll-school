@@ -5,6 +5,9 @@
   <meta name="author" content="{% if site.title == 'Jekyll School' %}Damian O'Loan{% else %}{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}{% endif %}">
   <meta name="robots" content="index, follow">
 
+  <link rel="apple-touch-icon" href="{{ site.url | prepend: site.baseurl | append: 'apple-touch-icon.png' }}" />
+  <link rel="icon" type="image/png" href="{{ site.url | prepend: site.baseurl | append: 'favicon.png' }}" />
+
   <title>{% if page.title %}{{ page.title | append: ' | '  }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
 

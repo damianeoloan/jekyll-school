@@ -5,8 +5,8 @@
   <meta name="author" content="{% if site.title == 'Jekyll School' %}Damian O'Loan{% else %}{% for student in site.students %}{% if forloop.last == true %}{{ student.name }}{% else %}{{ student.name | append: ', ' }}{% endif %}{% endfor %}{% endif %}">
   <meta name="robots" content="index, follow">
 
-  <link rel="apple-touch-icon" href="{{ site.url | prepend: site.baseurl | append: 'apple-touch-icon.png' }}" />
-  <link rel="icon" type="image/png" href="{{ site.url | prepend: site.baseurl | append: 'favicon.png' }}" />
+  <link rel="apple-touch-icon" href="{{ site.url | prepend: site.baseurl | append: '/apple-touch-icon.png' }}" />
+  <link rel="icon" type="image/png" href="{{ site.url | prepend: site.baseurl | append: '/favicon.png' }}" />
 
   <title>{% if page.title %}{{ page.title | append: ' | '  }}{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
@@ -15,19 +15,19 @@
   <meta itemprop="name" content="{{ page.title | append: ' | ' }}{{ site.title }}">
   <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
   <!-- Twitter -->  
-  <meta itemprop="image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  <meta itemprop="image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ site.twitter_username }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | append: ' | ' }}{{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
   <meta name="twitter:creator" content="{% if page.author %}{{ page.author }}{% elsif page.username %}{{ page.username }}{% else %}{{ site.title }}{% endif %}">
   <!-- Twitter Summary card images must be at least 120x120px -->
-  <meta name="twitter:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.url }}{% else %}{{ site.logo | prepend: '/' | prepend: site.url }}{% endif %}">
   <!-- Open Graph -->
   <meta property="og:title" content="{{ site.title  | append: ' | '}}{{ page.title }}">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}" />
+  <meta property="og:image" content="{% if page.img-path %}{{ page.img-path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: '/' | prepend: site.url }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.introduction %}{{ page.introduction }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
   <meta property="og:site_name" content="{[ site.title ]}" />
   <meta property="article:tag" content="{{ page.title }}" />
@@ -39,7 +39,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/vendors/normalize.css">
-  <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />

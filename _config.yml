@@ -28,3 +28,5 @@ collections: # These allow the site members to have their own individual pages w
     output: true # This says make a page for every admin
     permalink: /:path/ # This says make the link for their page /schoolname/admin-name
 # Gems
+plugins:
+  - jekyll-paginate

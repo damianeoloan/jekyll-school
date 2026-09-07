@@ -1,2 +1,3 @@
 # jekyll-school
-Jekyll themed for staff and students to make websites together
+
+Preview site on [Github Pages.](https://damianeoloan.github.io/jekyll-school/)

@@ -12,7 +12,7 @@ layout: default
 </section>
 
 <div class="posts-list">
-  <a href="{{ page.author | prepend: site.baseurl }}"><h2>Latest from  
+  <a href="{{ page.author | prepend: '/' | prepend: site.baseurl }}"><h2>Latest from  
     {% for student in site.students %}
       {% if student.username == page.author %}
       <span>{{ student.name }}</span>
@@ -49,7 +49,7 @@ layout: default
       <article>
         <h1>{{ post.title }}</h1>
         <p>{{ post.excerpt }}</p>
-        <a class="read-more" href="{{ post.url }}">read more</a>
+        <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">read more</a>
       </article>
     </div></a>
     {% endif %}

@@ -15,6 +15,6 @@ permalink: /404.html
     
     <h3 class="site-description">{{ site["404"] }}</h3>
 	
-	  <a href="{{ site.url | prepend: site.baseurl }}" class="home-button"><p>{{ site["404-button"] }}</p></a>
+	  <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" class="home-button"><p>{{ site["404-button"] }}</p></a>
   </div>
 </section>

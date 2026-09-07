@@ -5,7 +5,7 @@ name: "Bob B"
 username: bob
 email: bob@example.com
 img-path: /images/students/bob.svg
-introduction: Hello world, I'm Bob. I quite like Alice.
+introduction: Hello world, I'm Bob. I'm quite like Alice.
 favourites:
   colour: "Red"
   music: "Sufjan Stevens"

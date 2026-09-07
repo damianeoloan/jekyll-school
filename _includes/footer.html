@@ -2,7 +2,7 @@
   <div class="grid-container">
     <div class="row">
       
-      <div class="one-quarter column copyright-notice">
+      <div class="one-third column copyright-notice">
       	<div class="creative-commons">
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
             <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><h4>Licensed under Creative Commons</h4></a>
@@ -76,17 +76,14 @@
         </div>
       </div>
       
-      <div class="one-half column footer-shares">
-      	{% if site.title == 'Jekyll School' %}
-      	<h3>Share Jekyll School</h3>
-      	{% else %}
+      <div class="one-third column footer-shares">
+      	{% unless site.title == 'Jekyll School' %}
       	<h3>{{ site.title }}</h3>
       	<a href="www.jekyll-school.com"><h5>Made with Jekyll School</h5></a>
-      	{% endif %}
-      	{% include social-share.html %}
+      	{% endunless %}
       </div>
 
-      <div class="one-quarter column about-us">
+      <div class="one-third column about-us">
       	<a href="https://github.com/damianeoloan/jekyll-school"><h4>Jekyll School on Github</h4></a>
 
       	<a href="{% for page in site.pages %}{% if page.title == 'Questions and Ideas' %}{{ page.url | prepend: site.baseurl }}{% endif %}{% endfor %}"><h4 class="lower">Questions and Ideas</h4></a>

@@ -5,7 +5,7 @@ name: "Alice A"
 username: alice
 email: alice@example.com
 img-path: /images/students/alice.svg
-introduction: Hey, I'm Alice. I <3 Bob and I <3 chatting!
+introduction: Hey, I'm Alice. I <3 knitting and I <3 chatting!
 favourites:
   colour: "Blue"
   music: "Adele"

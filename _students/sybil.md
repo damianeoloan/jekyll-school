@@ -5,7 +5,7 @@ name: "Sybil S"
 username: sybil
 email: sybil@example.com
 img-path: /images/students/sybil.svg
-introduction: Sybil here, friends call me Nancy, boyfriend calls me the Blonde!
+introduction: Sybil here, friends call me Nancy, call myself the Blonde!
 favourites:
 github-link:
 ---

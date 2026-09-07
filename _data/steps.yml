@@ -176,11 +176,11 @@
          </g>
        </svg>
 
-- h2: Published on the Internets!
+- h2: Publish Privately or Online
   img-path: /images/setup/setup10.jpg
   img-alt: Pushing a repository to Github pages
-  text: "Head over to settings to rename the website. Use exactly the organisation name you chose in step 2.
-        </br>Your website's waiting for you now at orgname.github.io - <strong>congratulations!</strong>"
+  text: You can deploy to a private server following the guides on <a href="https://jekyllrb.com/docs/deployment/" target="_blank">Jekyll docs</a>. To publish on Github, head over to settings to rename the website. Use exactly the organisation name you chose in step 2.
+        </br>Your website's waiting for you now at orgname.github.io - <strong>congratulations!</strong>
   svg: !xml |
        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
        <svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">

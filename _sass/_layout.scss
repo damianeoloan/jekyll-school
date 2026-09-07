@@ -154,7 +154,7 @@ footer.main-footer {
     color: $white-color;
   }
   svg {
-    path {
+    path, use {
       fill: $white-color;
     }
   }
@@ -167,6 +167,7 @@ footer.main-footer {
     margin-top: $spacing-unit/2;
   }
   .footer-shares {
+    min-height: 1px;
     h3 {
       margin-bottom: 0;
       font-weight: 300;
@@ -178,29 +179,8 @@ footer.main-footer {
       }
     }
   }
-  .social-share {
-    svg {
-      width: 48px;
-      height: 48px;
-      margin-top: $spacing-unit/2;
-    }
-  }
-  a.share-item:first-of-type {
-    margin-right: $spacing-unit;
-  }
-  a.share-item:last-of-type {
-    margin-left: $spacing-unit;
-  }
   a:hover {
     color: $yellow-color;
-  }
-  @include media-query($tablet) {
-    .social-share {
-      svg {
-        width: 36px;
-        height: 36px;
-      }
-    }
   }
   @include media-query($mobile) {
     .copyright-notice, .footer-shares, .about-us {
